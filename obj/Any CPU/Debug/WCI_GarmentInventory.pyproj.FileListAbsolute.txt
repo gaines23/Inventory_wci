@@ -1,0 +1,1 @@
+C:\WCI\InventoryManagement\WCI_GarmentInventory\obj\Any CPU\Debug\WCI_GarmentInventory.pyproj.CoreCompileInputs.cache

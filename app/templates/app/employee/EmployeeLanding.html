@@ -1,0 +1,95 @@
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/EmployeeLanding.css">
+    <script type="text/javascript" src= "../static/app/scripts/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src= "../static/app/scripts/jquery-ui.js"></script> 
+</head>
+
+        <div class="Title">
+                <h2>Search Employee </h2>
+        </div>
+
+        <div class="blank"></div>
+
+            <div class="EmpSearchBox">
+                
+                <div class="ID_Search"ID>
+                    <p>Employee ID</p>
+                    <input type="number" class="ID" id="IdInput" onkeyup="IDSearch()" onfocus="this.value=''">
+                </div> 
+                
+                <div class="FirstSec">
+                    <div class="First_Search">
+                        <p>First Name</p>
+                        <input type="text" class="First" id="FirstNameInput" onkeyup="FirstSearch()" onfocus="this.value=''">
+                    </div> 
+
+                    <div class="Last_Search">
+                        <p>Last Name</p>
+                        <input type="text" class="Last" id="LastNameInput" onkeyup="LastSearch()" onfocus="this.value=''">
+                    </div>
+                </div>
+
+                <div class="SecondSec">
+                    <div class="Dept_Search">
+                        <p>Department</p>
+                        <input type="text" class="Dept" id="DeptInput" onkeyup="DeptSearch()" onfocus="this.value=''">
+                    </div>
+
+                    <div class="Job_Search">
+                        <p>Job</p>
+                        <input type="text" class="Job" id="JobInput" onkeyup="JobSearch()" onfocus="this.value=''">
+                    </div>
+                </div>
+
+                <div class="EmpSearchButtons">  
+                    <a href="{% url 'EmployeeLanding' %}" class="EmployeeSearch" id="inventoryButton">
+                        <p id="resetemp">Reset</p>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="EmpTable">
+                <div class="EmpSearch">
+                    <table class="table table-bordered" id="emptable">
+                        <thead>
+                                <th>
+                                    Employee ID &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    First Name &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Last Name &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Department &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Job &nbsp;&nbsp;&#8645;
+                                </th>
+                        </thead>
+                        <tbody>
+                            {% for row in empsearch %}
+                                <tr>  
+                                    <td>
+                                        <a href="/EmployeeDetails/{{row.employeeid}}">{{row.employeeid}}
+                                        </a>
+                                    </td>
+                                    <td>{{ row.firstname }}</td>
+                                    <td>{{ row.lastname }}</td>
+                                    <td>{{ row.department }}</td>
+                                    <td>{{ row.job }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+    <script language="Javascript" type="text/javascript" src="../static/app/scripts/EmployeeLanding.js"></script>
+
+    {% endblock %}
+    

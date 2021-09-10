@@ -1,0 +1,87 @@
+{% extends "app/garmentorders/GarmentOrdersLayout.html" %}
+
+{% block ordercontent %}
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/GarmentOrderLanding.css">
+</head>
+
+    <div class="Title">
+            <h2>Search All Garment Orders</h2> 
+    </div>
+
+        <div class="blank"></div>
+
+        <form class="GarmSearchBox" method="GET">
+
+            <div class="OrderID_Search">
+                <h2>Order ID</h2>
+                {{ordfilter.form.garmentorderid}}
+            </div> 
+
+            <div class="EmpID_Search">
+                <h2>Employee ID</h2>
+                {{ordfilter.form.employeeid}}
+            </div>
+
+            <div class="Job_Search">
+                <h2>Job</h2>
+                {{ordfilter.form.job}}
+            </div>
+
+            <div class="Status_Search">
+                <h2>Order Status</h2>
+                {{ordfilter.form.orderstatus}}
+            </div>
+                
+            <div class="GarmSearchButtons">
+                <button id="search" onlick="" class="SearchOrder">Search</button>
+                <a href="{% url 'GarmentOrdersLanding' %}" class="OrderSearch" id="orderButton">
+                    <p id="resetemp">Reset</p>
+                </a>
+            </div>
+
+        </form>
+
+        <div class="GarmOrderInfo">
+                <div class="GarmOrdersTable">
+                    <table class="table table-bordered" id="garmorderstable">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Emp ID</th>
+                                <th>Job</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Reason</th>
+                                <th>Ordered By</th>
+                                <th>Ordered On</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ord in ordfilter.qs %}
+                                <tr>
+                                    <td><a href="/OrderDetails/{{ord.garmentorderid}}">{{ ord.garmentorderid }}</td>
+                                    <td><a href="/EmployeeDetails/{{ord.employeeid}}">{{ ord.employeeid }}</a></td>
+                                    <td></td>
+                                    <td>{{ ord.garmenttype }}</td>
+                                    <td>{{ ord.amount }}</td>
+                                    <td>{{ ord.reason }}</td>
+                                    <td>{{ ord.orderplacedby }}</td>
+                                    <td>{{ ord.orderplaceddate }}</td>
+                                    <td>{{ ord.orderstatus }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+    {% endblock %}
+    
+    {% block actionbuttons %}
+        <a href="{% url 'CreateGarmentOrder' %}" class="Add">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">New<br>Order</button>
+        </a>
+
+  {% endblock %}

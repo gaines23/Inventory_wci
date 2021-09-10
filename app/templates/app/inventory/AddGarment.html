@@ -1,0 +1,154 @@
+{% extends "app/inventory/InventoryLayout.html" %}
+{% block invcontent %}
+
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '../static/app/content/AddGarm.css' %}">
+</head>
+
+        <div id="addTitle">
+            Add New Garment
+        </div>
+        
+        <div class="blank"></div>
+        
+        <div class="InvForm">
+            <form id="addGarm" class="AddGarmForm" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+               <div class="SelectGarmentType">
+                    <p id="selectGarmTypeInst">
+                        Select Job The Garment Falls Under: 
+                    </p>
+                    <p class="SelectJob">
+                        <label for="id_jobs_select">Select Job: </label>
+                            <br>
+                        {{ addgarm.jobs_select }}
+                    </p>
+                        <br>
+                    <p class="SelectGarment">
+                        <label for="id_garmdef_select">Select Garment Type: </label>
+                            <br>
+                        {{ addgarm.garmdef_select }}
+                    </p>
+                </div> 
+
+                <div class="GarmentInfo">
+                            
+                    <p id="garmInfoInst">
+                        Enter Garment Information Below
+                    </p>
+
+                    <div class="FirstRow">
+                        <p id="garmnumber">
+                            <label for="id_garmentnumber">Add Garment Number:</label>
+                                <br>
+                            {{ addgarm.garmentnumber }}
+                        </p>
+                        <p id="rfid">
+                            <label for="id_rfid_barcode">RFID/Barcode #:</label>
+                                <br>
+                            {{ addgarm.rfid_barcode }}
+                        </p>
+                    </div>
+                                
+                    <div class="SecondRow">
+                        <p id="slot">
+                            <label for="id_slotnumber">Slot Number:</label>
+                                <br>
+                            {{ addgarm.slotnumber }}
+                        </p>
+                        <p id="conveyor">
+                            <label for="id_conveyornumber">Conveyor #:</label>
+                                <br>
+                            {{ addgarm.conveyornumber }}
+                        </p>
+                        <p id="garmlocation">
+                            <label for="id_garmlocation">Garm Location:</label>
+                                <br>
+                            {{ addgarm.garmlocation }}
+                        </p>
+                    </div>
+
+                    <div class="ThirdRow">
+                        <p id="missing">
+                            <label for="id_missing">Missing: (Date)</label>
+                            {{ addgarm.missing }}
+                        </p>
+                        <p id="loaned">
+                            <label for="id_loaned">Loaned:</label>
+                                <br>
+                            {{ addgarm.loaned }}
+                        </p>
+                        <p id="altid">
+                            <label for="id_altid">Alternate ID:</label>
+                            {{ addgarm.altid }}
+                        </p>
+                    </div>
+                </div>
+
+                    <br>
+
+                <div class="AssignEmployee">
+                    <div id="employeeTitle">Assign Employee:</div>
+                    <p id="enterEmp">
+                        <label for="id_employeeid">Enter Employee ID: </label> <br>
+                        {{ addgarm.emp_id }}
+                    </p>                    
+                    <p id="submit">
+                        <input type="submit" id="saveGarm" value="Save Garment">
+                    </p>  
+                    <p id="fullname">
+                        <label for="id_empfullname">Name: </label> <br>
+                    </p>
+                </div> 
+                 
+            </form>
+        </div>
+
+    {% endblock %}
+    
+    
+    {% block actionbuttons %}
+        <div class="Add" onclick="window.location.href='{%  url 'AddGarment' %}'">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add</button>
+        </div>
+    
+    <script language="javascript">
+        $('#id_jobs_select').change(function() {populateGarmDef(this)});
+        
+        jobs = {{ addgarm.jobs | safe }};
+        garms = {{ addgarm.garms | safe }};
+
+        populateJob();
+        $("#id_garmdef_select").empty();
+        $("#id_garmdef_select").append('<option value="" disabled selected>Select Job First</option>');
+        function populateJob() {
+            $('#id_jobs_select').empty();
+            $("#id_jobs_select").append('<option value="" disabled selected>Select Job</option>');
+            $.each(jobs, function(v) {
+                $('#id_jobs_select')
+                    .append($("<option></option>")
+                    .attr("value", jobs[v])
+                    .text(jobs[v]));
+            });
+        }
+
+        function populateGarmDef(event) {
+            job = $("#id_jobs_select option:selected").text();
+            $("#id_garmdef_select").empty();
+            $("#id_garmdef_select").append('<option value="" disabled selected>Select Garment Type</option>');
+            for (let [b, bgarms] of Object.entries(garms)) {
+                if (b == job) {                    
+                    for (garm in bgarms) {
+                        $('#id_garmdef_select')
+                            .append($("<option></option>")
+                                .attr("value", bgarms[garm])
+                                .text(bgarms[garm]));
+                    }
+                }
+            }
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,381 @@
+.MainContainer .SearchBar{
+    height: 10%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+.SearchBar .InstructionTitle, .SearchBox{
+    display: none;
+}
+
+.MainContainer .InventoryResults{
+    height: 80%;
+}
+
+.InventoryResults #addTitle{
+    width: 65%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+    font-size: 35px;
+    padding-top: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.blank{
+    float: right;
+    width: 35.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+
+.InventoryResults .InvForm{
+    width: 100%;
+    height: 91%;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+    font-size: 27px;
+    border-top-right-radius: 30px 30px;
+}
+
+.InventoryResults .AddGarmForm .SelectGarmentType{
+    width: 40%;
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-right: 1px grey solid;
+}
+
+.InventoryResults .AddGarmForm #selectGarmTypeInst{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.AddGarmForm .SelectGarmentType .SelectJob{
+    margin-left: 20px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    height: 50px;
+    position: relative;
+}
+
+.AddGarmForm .SelectGarmentType .SelectJob select{
+    text-align: center;
+    width: 80%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .SelectGarmentType .SelectJob option{
+    font-size: 20px;
+}
+
+
+.AddGarmForm .SelectGarmentType .SelectGarment{
+    margin-left: 20px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    height: 50px;
+    position: relative;
+}
+
+.AddGarmForm .SelectGarmentType .SelectGarment select{
+    text-align: center;
+    width: 80%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .SelectGarmentType .SelectGarment option{
+    font-size: 20px;
+}
+
+/* Garment Information */
+.AddGarmForm .GarmentInfo{
+    width: 55%;
+    float: right;
+    margin-top: 25px;
+}
+
+.AddGarmForm .GarmentInfo #garmInfoInst{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.AddGarmForm .GarmentInfo .FirstRow{
+    width: 100%;
+    height: 70px;
+}
+
+.AddGarmForm .GarmentInfo #garmnumber{
+    width: 45%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo #garmnumber input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo #rfid{
+    width: 45%;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo #rfid input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo .SecondRow{
+    width: 100%;
+    height: 110px;
+}
+
+.AddGarmForm .GarmentInfo #slot{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo #slot input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo #conveyor{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo #conveyor input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo #garmlocation{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo #garmlocation input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #missing{
+    width: 28%;
+    height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #missing input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #loaned{
+    width: 25%;
+    height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #loaned input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #altid{
+    width: 25%;
+    height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.AddGarmForm .GarmentInfo .ThirdRow #altid input{
+    text-align: center;
+    width: 90%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+/* Employee Assigment */
+.AddGarmForm .AssignEmployee {
+    font-size: 20px;
+    width: 100%;
+    margin-top: 30px;
+    float: right;
+    text-align: center;
+}
+
+.AddGarmForm .AssignEmployee #employeeTitle{
+    font-size: 30px;
+}
+
+.AddGarmForm .AssignEmployee #assigned{
+    width: 15%;
+    height: 55px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 40%;
+}
+
+.AddGarmForm .AssignEmployee #assigned input, select{
+    text-align: center;
+    width: 70%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.AddGarmForm .AssignEmployee #enterEmp{
+    float: left;
+    margin-left: 21%;
+    margin-top: 0px;
+}
+
+.AddGarmForm .AssignEmployee #enterEmp select{
+    float: left;
+    text-align: center;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    height: 35px;
+    font-size: 25px;
+}
+
+.AddGarmForm .AssignEmployee #fullname{
+    float: left;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.AddGarmForm .AssignEmployee #fullname input{
+    float: right;
+    text-align: center;
+    height: 35px;
+    font-size: 25px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+.AddGarmForm #saveGarm{
+    height: 60px;
+    font-size: 20px;
+    margin-top: 70px;
+    width: 150px;
+    color: white;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 30px;
+}
+
+.ActionButtons .AddButton{
+    background-color: navy;
+    font-weight: bold;
+    color: darkgrey;
+}
+

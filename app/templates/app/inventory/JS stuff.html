@@ -1,0 +1,68 @@
+<tr>
+	<td>
+		<input id='id_ord-" + form_num + "-DELETE del' type='checkbox' name='ord-" + form_num + "-DELETE'>
+	</td>
+	<td><input id='id_ord-" + form_num + "-missing' type='date' name='ord-" + form_num + "-missing' class='missing'></td>
+
+	<td><select id='id_ord-" + form_num + "-loaned' name='ord-" + form_num + "-loaned' class='loaned'></select></td>
+
+	<td><input id='id_ord-" + form_num + "-reason' type='text' name='ord-" + form_num + "-reason'></td>
+
+	<td><input id='id_ord-" + form_num + "-amount' type='number' name='ord-" + form_num + "-amount' class='amount'></td>
+
+	<td><input id='id_ord-" + form_num + "-orderplaceddate' type='date' name='ord-" + form_num + "-orderplaceddate' class='orderdate'/></td>
+
+	<td><input id='id_ord-" + form_num + "-orderplacedby' type='text' name='ord-" + form_num + "-orderplacedby' class='placedby'></td>
+
+	<td><select id='id_ord-" + form_num + "-orderstatus' name='ord-" + form_num + "-orderstatus' class='status'></select></td>
+
+</tr>
+
+
+
+        var form_num = document.getElementById('id_ord-INITIAL_FORMS').getAttribute('value');
+
+        $(document).ready(function() {
+            $("#add_more").click(function() {
+                form_num ++;
+                $("input[id='id_ord-TOTAL_FORMS']").attr('value', form_num --);
+                $("#ordersTable").prepend("<tr> <td><input id='id_ord-" + form_num + "-DELETE del' type='checkbox' name='ord-" + form_num + "-DELETE'></td> <td><input id='id_ord-" + form_num + "-missing' type='date' name='ord-" + form_num + "-missing'></td> <td><select id='id_ord-" + form_num + "-loaned' name='ord-" + form_num + "-loaned'></select></td> <td><input id='id_ord-" + form_num + "-reason' type='text' name='ord-" + form_num + "-reason'></td> <td><input id='id_ord-" + form_num + "-amount' type='number' name='ord-" + form_num + "-amount'></td> <td><input id='id_ord-" + form_num + "-orderplaceddate' type='date' name='ord-" + form_num + "-orderplaceddate'></td> <td><input id='id_ord-" + form_num + "-orderplacedby' type='text' name='ord-" + form_num + "-orderplacedby'></td> <td><select id='id_ord-" + form_num + "-orderstatus' name='ord-" + form_num + "-orderstatus' class='status'></select></td></tr>");
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #extra_forms = 0
+
+    ## Inline Formset for user input into table + order table
+    #NewOrderFormSet = inlineformset_factory(
+    #    Garmdefaultvalues, Garmentorders, form=GarmentOrdersForm,
+    #    fields=["missing", "loaned", "reason", "amount", "orderplaceddate", "orderplacedby", "orderstatus",],
+    #    fk_name = 'garmentdefaultid',
+    #    extra = extra_forms,
+    #    can_delete = True,        
+    #)
+
+
+
+    #if request.method == 'POST' and 'order' in request.POST:
+    #    formset = NewOrderFormSet(request.POST, instance=gdefid)
+       
+    #    if formset.is_valid():
+    #        for i in range(0, formset.total_form_count()):
+    #            form = formset.forms[i]
+    #            form.save()
+    #        formset.save()
+    #        return HttpResponseRedirect("/GarmentDetails/"+garmentnumber_garmentdefaultid)
+    #else:
+    #    formset = NewOrderFormSet(instance=gdefid)

@@ -1,0 +1,95 @@
+{% extends "app/layout.html" %}
+
+{% block maincontent %}
+
+<head>
+    <link rel="stylesheet" href="../static/app/content/GarmentActivityLanding.css">
+</head>
+    
+        <div class="SearchBar">
+            <div class="InstructionTitle">
+                <p>Search</p>
+            </div>
+            
+            <form class="SearchBox" method="GET">
+                    <div class="Garment">
+                        <h2>Garment</h2>
+                        {{gafilter.form.garmentnumber}}
+                    </div> 
+
+                    <div class="RFID">
+                        <h2>RFID/Barcode</h2>
+                        {{gafilter.form.rfid_barcode}} 
+                    </div>
+
+                    <div class="Conveyor">
+                        <h2>Conveyor Number</h2>
+                        {{gafilter.form.conveyor}}
+                    </div>
+
+                    <div class="SearchAndReset">
+                        <button id="search" onlick="" class="Search">Search</button>
+                        <a href="{% url 'GarmentActivityLanding' %}" class="GarmActReset" id="garmActReset">
+                            <button id="reset" class="Reset">Reset</button>
+                        </a>
+                    </div> 
+            </form>
+        </div>
+
+
+    <div class="InventoryResults">
+        <div class="InvTabs">
+        	<h2>Garment Activity Results</h2>
+        </div>
+
+            <div class="blank"></div>
+        
+        <div class="InvForm">
+      		<div class="GarmActivityTable">
+				<table class="table table-bordered" id="invtable">
+				    <thead>
+				      <tr>
+				        <th>Garment Number</th>
+				        <th>RFID/<br>Barcode</th>
+                        <th>Employee ID</th>
+                        <th>Dept/Job</th>
+                        <th>Garm Type</th>
+				        <th>Slot</th>
+				        <th>Conveyor</th>
+				        <th>Garm<br>Location</th>
+				        <th>Last<br>Picked Up</th>
+				        <th>Last<br>Dropped Off</th>
+				        <th>Assigned</th>
+				        <th>Loaned</th>
+				        <!--<th>One For One</th>-->
+				        <th>Missing</th>
+				        <th>Overdue</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      {% for ga in gafilter.qs %}
+				        <tr>
+				          <td><a href="/GarmentDetails/{{ga.garmentid}}">{{ ga.garmentnumber }}</a></td>
+				          <td>{{ ga.rfid_barcode }}</td>
+                          <td><a href="/EmployeeDetails/{{ga.employeeid}}">{{ga.employeeid}}</a></td>
+                          <td>{{ ga.deptjob }}</td>
+                          <td>{{ ga.garmentdefaultdef }}</td>
+				          <td>{{ ga.slotnum }}</td>
+				          <td>{{ ga.conveyor }}</td>
+				          <td>{{ ga.garmlocation }}</td>
+				          <td>{{ ga.lastpickedup }}</td>
+				          <td>{{ ga.lastdroppedoff }}</td>
+				          <td>{{ ga.assigned }}</td>
+				          <td>{{ ga.loaned }}</td>
+				          <!--<td>{{ ga.oneforone }}</td>-->
+				          <td>{{ ga.missing }}</td>
+				          <td>{{ ga.deliquentgarm }}</td>
+				      {% endfor %}
+				    </tbody>
+				  </table>
+           		</div>
+        </div>
+    </div>
+
+
+{% endblock %}

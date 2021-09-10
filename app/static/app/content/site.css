@@ -1,0 +1,522 @@
+/* Main Container holds all of the information 
+    necessary for each page
+
+    This code will change per page. This is where
+    we will mostly be doing editing and updating
+
+*/
+
+@charset "UTF-8";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img, embed,
+object, video {
+    max-width: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #cccccc;
+    margin: 0px;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    height: 10%;
+    width: 100%;
+    margin-top: -18px;
+}
+
+
+
+
+
+.RightSideInfo{
+    float: right;
+    width: 25%;
+    margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+/* Login Forms */
+.Login{
+    width: 75%;
+    float: right;
+    margin-top: 18px;
+    font-size: 25px;
+    font-family: sans-serif;
+    border-right: solid lightgrey;
+    height: 65px;
+    padding-right: 20px;
+}
+
+.Login .LoginButton{
+    height: 70px;
+    width: 130px;
+    float: right;
+    font-size: 20px;
+    margin-top: ;
+}
+
+.Login .LoginContainer{
+    position: fixed;
+    display: none;
+    border: 3px solid grey;
+    z-index: 9;
+    height: 440px;
+    width: 435px;
+    background-color: white;
+    margin-top: 100px;
+}
+
+.LoginContainer .LoginForm{
+    width: 100%;
+    padding: 10px;
+    background-color: royalblue;
+    height: 230px;
+}
+
+#loginForm h2{
+    text-align: center;
+}
+
+#loginForm .LoginInfo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#loginForm .LoginGroup{
+    height: 50px;
+    width: 300px;
+}
+
+#loginForm button{
+    height: 35px;
+    width: 100px;
+    margin-left: 155px;
+    margin-top: 25px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    width: 35px;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Exit{
+    width: 25%;
+    float: right;
+    height: 100px;
+}
+
+.Exit .ExitButton{
+    width: 30px;
+    height: 35px;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+/* Top WCI Logo */
+.HomeLogo{
+    float: left;
+    margin-top: 9px;
+    height: 95px;
+    width: 33%;
+}
+
+.HomeLogo img{
+    height: 90px;
+    width: 175px;
+    margin-left: 75px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+/* Direction Buttons */
+.Directions{
+    width: 33%;
+    height: 95px;
+    float: left;
+}
+
+.Directions #prev{
+    height: 90px;
+    text-align: center;
+    float: left;
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Directions #prev input{
+    height: 75px;
+    width: 155px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Directions #next{
+    height: 90px;
+    text-align: center;
+    float: right;
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Directions #next input{
+    margin-top: 20px;
+    height: 75px;
+    width: 155px;
+    font-size: 20px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+
+/* Custom Support button and box */
+.CustomerSupport{
+    width: 33%;
+    float: right;
+    margin-top: 18px;
+    font-size: 25px;
+    font-family: sans-serif;
+    height: 65px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.CustomerSupport #supportButton{
+    height: 75px;
+    width: 155px;
+    font-size: 20px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.CustomerSupport .SupportContainer{
+    position: fixed;
+    right: 0px;
+    display: none;
+    border: 3px solid grey;
+    width: 470px;
+    background-color: white;
+    margin-top: 100px;
+}
+
+.SupportContainer .SupportForm{
+    width: 100%;
+    padding: 10px;
+    background-color: royalblue;
+    height: 190px;
+    margin-top: 80px;
+}
+
+#supportForm h2{
+    text-align: center;
+}
+
+#supportForm .CustomerSupportForm input{
+    font-size: 25px;
+}
+
+#supportForm .SupportInfo{
+    margin-bottom: 20px;
+    float: left;
+}
+
+#supportForm .SupportGroup{
+    height: 60px;
+    width: 300px;
+    float: left;
+}
+
+#supportForm button{
+    float: right;
+    height: 35px;
+    width: 100px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+.closeSupport {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    width: 35px;
+    text-align: center;
+}
+
+.closeSupport:hover,
+.closeSupport:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.MainContainer{
+    width: 95%;
+    background-color: #f2f2f2;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 78%;
+    margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+footer{
+    height: 10%;
+    background-color: #f2f2f2;
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+footer .MenuBar{
+    width: 80%;
+    height: 100%;
+    margin-left: 180px;
+    background-color: #4d4d4d;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 11px 0px 9px #b8b8b8;
+}
+
+footer .MenuBar .Inventory, .Employees, .Activity,
+.Orders, .Cleaning, .Repairs, .Reports, .Settings{
+    width: 12.5%;
+    float: left;
+    padding-top: 1%;
+    height: 95px;
+    color: #8a8a8a;
+    font-family: sans-serif;
+}
+
+footer .MenuBar .Inventory{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Inventory .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Inventory #InvTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Employees{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Employees .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Employees #EmpTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Activity{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Activity .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Activity #ActTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Orders{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Orders .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Orders #OrdTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Cleaning{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Cleaning .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Cleaning #ClTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Repairs{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Repairs .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Repairs #RepTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Reports{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Reports .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Reports #ReportTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Settings{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Settings .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Settings #SetTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}

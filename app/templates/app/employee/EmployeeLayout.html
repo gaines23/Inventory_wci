@@ -1,0 +1,22 @@
+{% extends "app/layout.html" %}
+{% block maincontent %}
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/EmployeeLayout.css">
+</head>
+    
+    <div class="ActionButtons">
+        <a href="{% url 'EmployeeCreate' %}" class="Add">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add<br>Employee</button>
+        </a>
+    </div>
+
+    <div class="EmployeeResults">
+
+        {% block empcontent %}
+        {% endblock %}
+
+    </div>
+    
+
+
+{% endblock %}

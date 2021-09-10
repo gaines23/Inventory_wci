@@ -1,0 +1,169 @@
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/EmployeeCreate.css">
+</head>
+
+        <div class="EmpTabs">
+            <button id="Info" class="TabSelect tablink active" onclick="openTab(event, 'employeeInfo')">New Employee</button>
+
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="EmpForm">
+            <form class="EmployeeInfo" id="employeeInfo" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <div class="Employee">
+                    <div class="FirstRow">
+                        <p id="employeeid">
+                            <label for="id_employeeid">Employee ID</label>
+                                <br>
+                            {{ addempform.employeeid }}
+                        </p>
+                    </div>
+
+                    <div class="SecondRow">
+                        <p id="firstName">
+                            <label for="id_empfirstname">First Name</label>
+                                <br>
+                            {{ addempform.empfirstname }}
+                        </p>
+                        <p id="lastName">
+                            <label for="id_emplastname">Last Name</label>
+                                <br>
+                            {{ addempform.emplastname }}
+                        </p>
+                    </div>
+                
+                    <div class="ThirdRow">
+                        <p id="dept">
+                            <label for="id_combineddef">Select Div/Dept: </label>
+                                <br>
+                            {{ addempform.combineddef }}
+                        </p>                        
+                        <p id="job">
+                            <label for="id_jobid">Select Job: </label>
+                                <br>
+                            <input id="id_jobid" value="{{ addempform.jobid }}">
+                        </p>
+                    </div>
+
+                    <div class="FourthRow">
+                        <p id="hire">
+                            <label for="id_hiredate">Hire Date</label>
+                                <br>
+                            {{ addempform.hiredate }}
+                        </p>
+                    </div>
+                
+                </div>
+
+                <div class="Garment">
+                    <div class="FirstRow">
+                        <p id="slot">
+                            <label for="slotassignment">Assigned Slot#</label>
+                                <br>
+                            {{addempform.slotassignment}}
+                        </p>
+                        <p id="conveyor">
+                            <label for="id_conveyor">Conveyor #</label>
+                                <br>
+                            {{addempform.conveyor}}
+                        </p> 
+                    </div>
+
+                    <div class="SecondRow">
+                        <p id="gender">
+                            <label for="id_gender">Gender</label>
+                                <br>
+                            {{addempform.gender}}
+                        </p>  
+                        <p id="email">
+                            <label for="id_gender">Email</label>
+                                <br>
+                            {{addempform.empemail}}
+                        </p>  
+                    </div>
+
+                    <div class="ThirdRow">
+                        <p id="shirtSize">
+                            <label for="id_shirtsize">Shirt Size:</label>
+                                <br>
+                            {{addempform.shirtsize}}
+                        </p>                         
+                        <p id="pantSize">
+                            <label for="id_pantsize">Pant Size</label>
+                                <br>
+                            {{addempform.pantsize}}
+                        </p>   
+                    </div>
+
+                    <div class="FifthRow">
+                        <p id="altInst">
+                            <label for="id_alterationinstructions">Alterations</label>
+                                <br>
+                            {{addempform.alterationinstructions}}
+                        </p>
+                    </div>
+
+                    <div class="FourthRow">
+                        <p id="shoeSize">
+                            <label for="id_shoesize">Shoe Size</label>
+                                <br>
+                            {{addempform.shoesize}}
+                        </p>                         
+                        <p id="jacketSize">
+                            <label for="id_jacketsize">Jacket Size</label>
+                                <br>
+                            {{addempform.jacketsize}}
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="Submit">
+                     <input type="submit" id="saveEmp" value="Save Employee">
+                </div>
+
+            </form>
+        </div>
+
+
+    {% endblock %}
+        
+    {% block actionbuttons %}
+        <a href="{% url 'EmployeeCreate' %}" class="Add">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add</button>
+        </a>
+
+    <script language="Javascript" type="text/javascript" src="../static/app/scripts/EmpDetails.js"></script>
+
+    <script language="javascript">
+        $( function() {
+            var availableTags = [
+                {% for dept in divdepts %}
+                    "{{dept.combineddef}}",
+                {% endfor %}
+            ];
+            $( "#id_combineddef" ).autocomplete({
+              source: availableTags
+            });
+          } );
+        $( function() {
+
+            var availableTags = [
+                {% for job in divdepts %}
+                    "{{job.jobid}}",
+                {% endfor %}
+            ];
+            $( "#id_jobid" ).autocomplete({
+              source: availableTags
+            });
+          } );
+    </script>
+
+    {% endblock %}

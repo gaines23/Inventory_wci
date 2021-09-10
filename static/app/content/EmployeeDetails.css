@@ -1,0 +1,912 @@
+
+/* Tabs */
+.EmployeeResults .EmpTabs{
+    width: 60%;
+    height: 65px;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.tablink:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button{
+    float: left;
+    background-color: inherit;
+    outline: none;
+}
+
+.blank{
+    float: right;
+    width: 40.1%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+.EmployeeResults .EmpTabs #Info{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.EmployeeResults .EmpTabs #GarmTables{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.EmployeeResults .EmpTabs #Orders{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 25px;    
+    padding: 0px;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Emp Details */
+
+.EmployeeResults .EmpForm{
+    width: 100%;
+    float: right;
+    height: 87%;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+#employeeInfo{
+    width: 100%;
+    float: left;
+    height: 98%;
+}
+
+#employeeInfo .Employee{
+    width: 50%;
+    margin-left: 30px;
+    float: left;
+    border-right: 1px solid lightgrey;
+}
+
+#employeeInfo .Employee .FirstRow{
+    width: 90%;
+}
+
+.Employee .FirstRow #employeeid{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.Employee .FirstRow #employeeid input{
+    text-align: center;
+    font-weight: bold;
+    height: 65px;
+    width: 100%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+.Employee .SecondRow{
+    width: 90%;
+    height: 100px;
+}
+
+.Employee .SecondRow #firstName{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.Employee .SecondRow #lastName{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.Employee .SecondRow #firstName input{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Employee .SecondRow #lastName input{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+.Employee .ThirdRow{
+    width: 90%;
+    height: 120px;
+}
+
+.Employee .ThirdRow #job{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.Employee .ThirdRow #job #id_jobdef_select{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+.Employee .ThirdRow #dept{
+    width: 45%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.Employee .ThirdRow #dept #id_divdept_select{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    font-family: Arial;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+
+
+
+
+.Employee .FourthRow{
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.Employee .FourthRow #hire{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Employee .FourthRow #hire input{
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+
+
+/* Emp Garm Info */
+
+#employeeInfo .Garment{
+    width: 47%;
+    float: right;
+    height: 90%;
+}
+
+.Garment .FirstRow{
+    width: 95%;
+    height: 85px;
+    float: right;
+    margin-right: 25px;
+}
+
+.Garment .FirstRow #slot{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Garment .FirstRow #slot input{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FirstRow #conveyor{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.Garment .FirstRow #conveyor input{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+.Garment .SecondRow{
+    width: 95%;
+    height: 85px;
+    margin-top: 55px;
+    float: right;
+    margin-right: 25px;
+}
+
+.Garment .SecondRow #gender{
+    width: 25%;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .SecondRow #gender select{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .SecondRow #gender option{
+    font-size: 20px;
+}
+
+.Garment .SecondRow #email{
+    width: 65%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.Garment .SecondRow #email input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+.Garment .ThirdRow{
+    width: 55%;
+    height: 85px;
+    margin-top: 70px;
+    float: left;
+    margin-left: 20px;
+}
+
+.Garment .ThirdRow #shirtSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .ThirdRow #shirtSize select{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .ThirdRow #shirtSize option{
+    font-size: 20px;
+}
+
+.Garment .ThirdRow #pantSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 3px;
+}
+
+.Garment .ThirdRow #pantSize input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+.Garment .FourthRow{
+    width: 55%;
+    height: 85px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 20px;
+}
+
+.Garment .FourthRow #shoeSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.Garment .FourthRow #shoeSize input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FourthRow #jacketSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .FourthRow #jacketSize select{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FourthRow #jacketSize option{
+    font-size: 20px;
+}
+
+
+
+
+
+.Garment .FifthRow{
+    width: 38%;
+    float: right;
+    height: 200px;
+    margin-right: 25px;
+    margin-top: 70px;
+}
+
+.Garment .FifthRow #altInst{
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px; 
+}
+
+.Garment .FifthRow #altInst textarea{
+    width: 100%;
+    height: 150px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+/* Edit and Delete Buttons */
+
+.EditDelete{
+    float: left;
+    width: 73.5%;
+    text-align: center;
+}
+
+.EditDelete input{
+    width: 25%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 30px;
+}
+
+
+.EditDelete #EditEmpButton{
+    float: right;
+}
+
+.EditDelete #deleteEmpButton{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Assigned Garms */
+
+/* 1st Table CSS */
+
+.empInfo #employeeGarmTables{
+    width: 70%;
+    height: 100%;
+}
+
+#employeeGarmTables .AssignedGarmentsTable{
+    height: 100%;
+    width: 57%;
+    float: right;
+}
+
+.AssignedGarmentsTable p{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms{
+    margin-right: 2%;
+    overflow-y: auto;
+    height: 90%;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms tbody{
+    text-align: center;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+#employeeGarmTables .AssignedGarmentsTable .EmpGarms tbody tr td a{
+    text-decoration: none;
+    font-weight: bold;
+    color: royalblue;
+}
+
+ #empgarmtable tr:nth-child(even){background-color: #f2f2f2;}
+ #empgarmtable tr:hover {background-color: #ddd;}
+
+
+
+/* 2nd Table CSS */
+#employeeGarmTables .JobGarmOutfits{
+    height: 100%;
+    width: 40%;
+    margin-left: 1%;
+    float: left;
+}
+
+.JobGarmOutfits p{
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms{
+    margin-right: 10px;
+    overflow-y: auto;
+    height: 90%;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms table{
+    width: 100%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody{
+    text-align: center;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr .job{
+    width: 17%;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr .desc{
+    width: 45%;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr .multi{
+    width: 12%;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr .tpj{
+    width: 12%;
+}
+
+#employeeGarmTables .JobGarmOutfits .JobGarms tbody tr .rs{
+    width: 12%;
+}
+
+ #jobgarmtable tr:nth-child(even){background-color: #f2f2f2;}
+ #jobgarmtable tr:hover {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Orders Tab */
+
+/* Garment Stats Table Info */
+#empOrders .EmpGarmStats{
+    float: left;
+    height: 90%;
+    width: 40%;
+    margin-left: 35px;
+    border-right: 1px lightgrey solid;
+}
+
+.EmpGarmStats .GarmStats{
+    margin-right: 10px;
+    overflow-y: auto;
+    height: 100%;
+    width: 95%;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+.EmpGarmStats p{
+    font-size: 25px;
+}
+
+.GarmStats table{
+    width: 100%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.GarmStats #garmstatstable thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+.GarmStats #garmstatstable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.GarmStats #garmstatstable thead tr th{
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.GarmStats #garmstatstable tbody{
+    text-align: center;
+}
+
+.GarmStats #garmstatstable tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+ #garmstatstable tr:nth-child(even){background-color: #f2f2f2;}
+ #garmstatstable tr:hover {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+ /* Employee Orders Table */
+ #empOrders .AllEmpOrders{
+    float: left;
+    height: 90%;
+    width: 55%;
+    margin-left: 25px;
+}
+
+.AllEmpOrders p{
+    font-size: 25px;
+}
+
+.AllEmpOrders .AllOrders{
+    overflow-y: auto;
+    height: 90%;
+    width: 100%;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+.AllOrders table{
+    width: 100%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.AllOrders #empordertable thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+.AllOrders #empordertable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+}
+
+.AllOrders #empordertable thead th{
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.AllOrders #empordertable tbody{
+    text-align: center;
+}
+
+.AllOrders #empordertable tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+ #empordertable tr:nth-child(even){background-color: #f2f2f2;}
+ #empordertable tr:hover {background-color: #ddd;}
+
+

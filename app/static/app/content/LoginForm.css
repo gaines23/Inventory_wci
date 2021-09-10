@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img, embed,
+object, video {
+    max-width: 100%;
+}
+
+.LoginContainer{
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+}
+
+
+

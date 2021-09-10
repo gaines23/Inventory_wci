@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+{% block maincontent %}
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '../static/app/content/InventoryLayout.css' %}">
+</head>
+
+    <div class="ActionButtons">
+        <div class="Add" onclick="window.location.href='{%  url 'AddGarment' %}'">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add<br>Garment</button>
+        </div>
+    </div>
+
+    <div class="InventoryResults">
+
+        {% block invcontent %}
+        {% endblock %}
+
+    </div>
+
+{% endblock %}

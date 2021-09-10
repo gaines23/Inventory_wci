@@ -1,0 +1,933 @@
+
+/* Tabs */
+.InventoryResults .GarmTabs{
+    width: 60%;
+    height: 65px;
+    border-top-left-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.tablink:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.GarmTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+.GarmTabs button{
+    float: left;
+    background-color: inherit;
+    outline: none;
+}
+
+.InventoryResults .GarmTabs #Info{
+    width: 50%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.InventoryResults .GarmTabs #Orders{
+    width: 50%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.blank{
+    float: right;
+    width: 40.1%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 29px;
+    border-top-right-radius: 30px 30px;
+    border-right: 2px grey solid;
+}
+
+
+
+
+
+/* Garm Form (Main Container) */
+.InventoryResults .GarmForm{
+    width: 100%;
+    height: 87%;
+    float: right;
+    font-size: 27px;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+
+
+
+
+/* Garment Number & RFID */
+
+.GarmForm .GarmIdRFID{
+    float: left;
+    width: 35%;
+    height: 90%;
+    border-right: 2px solid grey;
+}
+
+.GarmForm .GarmIdRFID .IdRfid{
+    height: 35%;
+}
+
+.GarmForm .GarmIdRFID .IdRfid .FirstRow{
+    width: 100%;
+    height: 70px;
+}
+
+.GarmForm .GarmIdRFID .IdRfid .FirstRow #garmnumber{
+    width: 50%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.GarmForm .GarmIdRFID .IdRfid .FirstRow #garmnumber input{
+    text-align: center;
+    width: 90%;
+    font-size: 40px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmForm .GarmIdRFID .IdRfid .FirstRow #rfid{
+    width: 50%;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.GarmForm .GarmIdRFID .IdRfid .FirstRow #rfid input{
+    text-align: center;
+    width: 90%;
+    font-size: 40px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmForm .GarmIdRFID .SecRow .SelectJob{
+    width: 45%;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    height: 75px;
+    position: relative;
+    float: Right;
+    text-align: center;
+}
+
+.GarmForm .GarmIdRFID .SecRow .SelectJob select{
+    width: 90%;
+    text-align: center;
+    height: 40px;
+    font-size: 25px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmForm .GarmIdRFID .SecRow .SelectJob option{
+    font-size: 20px;
+}
+
+.GarmForm .GarmIdRFID .SecRow .DeptDiv{
+    width: 45%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    height: 75px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.GarmForm .GarmIdRFID .SecRow .DeptDiv select{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmForm .GarmIdRFID .SecRow .DeptDiv option{
+    font-size: 20px;
+}
+
+
+
+
+
+
+/* Garm Inv Stats */
+.InventoryResults .GarmInvStats{
+    width: 100%;
+    height: 60%;
+    margin-top: 30px;
+}
+
+.InventoryResults .GarmInvStats #stats{
+    width: 80%;
+    height: 8%;
+    margin-left: 13%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.GarmInvStats .GarmsStatsTable{
+    height: 80%;
+    width: 90%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.GarmInvStats .GarmsStatsTable p{
+    font-size: 30px;
+}
+
+.GarmInvStats .GarmsStatsTable p #id_garmentnumber{
+    font-size: 30px;
+}
+
+.GarmInvStats .GarmsStatsTable .Stats{
+    width: 100%;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.GarmInvStats .GarmsStatsTable .Stats #garmtable{
+    width: 80%;
+}
+
+.GarmInvStats .GarmsStatsTable .Stats tbody tr{
+    margin-bottom: 15px;
+    font-size: 20px;
+    height: 45px;
+}
+
+.GarmInvStats .GarmsStatsTable .Stats tr th{
+    width: 35%;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+
+.GarmInvStats .GarmsStatsTable .Stats tr td{
+    padding-left: 20px;
+    border-bottom: 1px grey solid;
+    color: grey;
+}
+
+
+ #garmtable tr:nth-child(even){background-color: #f2f2f2;}
+ #garmtable tr:hover {background-color: #ddd;}
+
+
+
+
+
+
+
+/* Details */
+
+#garmInfo{
+    width: 65%;
+    height: 100%;
+    float: right;
+}
+
+#garmInfo form{
+    height: 100%;
+    margin-top: 0px;
+}
+
+.GarmentDetails .FirstRow{
+    height: 66%;
+    width: 100%;
+}
+
+.GarmentDetails .FirstRow .GarmInfo{
+    width: 50%;
+    float: left;
+}
+
+.GarmentDetails .FirstRow .GarmInfo #garmentTitle{
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .SelectGarment{
+    width: 100%;
+    height: 85px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .SelectGarment select{
+    float: left;
+    width: 85%;
+    text-align: center;
+    margin-left: 10%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .SelectGarment select option{
+    font-size: 20px;
+    width: 50%;
+}
+
+
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo{
+    width: 35%;
+    float: left;
+    margin-left: 13%;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #missing{
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #missing input{
+    width: 95%;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #loaned{
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #loaned select{
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #altid{
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .OtherInfo #altid input{
+    width: 95%;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentDetails .FirstRow .GarmInfo .GarmAlt{
+    width: 40%;
+    float: right;
+    margin-top: 10px;
+    margin-right: 8%;
+}
+
+.GarmentDetails .FirstRow .GarmInfo .GarmAlt textarea{
+    width: 100%;
+    height: 150px;
+    font-size: 20px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+    border-top-right-radius: 15px 15px; 
+}
+
+
+
+
+
+
+/* Convyeor Info */
+.GarmentDetails .FirstRow .ConveyorInfo{
+    width: 50%;
+    float: right;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #conveyorTitle{
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-align: center;    
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .slotconv{
+    height: 90px;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #slot{
+    width: 45%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 85px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #slot input{
+    width: 60%;
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #conv{
+    width: 45%;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 85px;
+    position: relative;
+    float: right;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #conv input{
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    overflow: hidden;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #garmlocation{
+    width: 100%;
+    height: 75px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #garmlocation input{
+    text-align: center;
+    height: 40px;
+    font-size: 25px;
+    overflow: hidden;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .dates{
+    width: 100%;
+    margin-top: 15px;
+    height: 80px;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .dates #pickup{
+    width: 45%;
+    margin-left: 5%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 80px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .dates #pickup input{
+    width: 90%;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .dates #dropoff{
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 80px;
+    position: relative;
+    float: right;
+    text-align: center;
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo .dates #dropoff input{
+    width: 90%;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;    
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #dateadded{
+    width: 100%;
+    height: 85px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;   
+}
+
+.GarmentDetails .FirstRow .ConveyorInfo #dateadded input{
+    text-align: center;
+    height: 50px;
+    font-size: 15px;
+    overflow: hidden;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+/* Employee Information */ 
+.GarmentDetails .SecondRow{
+    height: 34%;
+    width: 100%;
+}
+
+.GarmentDetails .SecondRow .AssignEmployee{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.GarmentDetails .SecondRow .AssignEmployee #enterEmp{
+    width: 100%;
+    height: 85px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+    text-align: center;
+}
+
+.GarmentDetails .SecondRow .AssignEmployee #enterEmp select{
+    float: left;
+    width: 80%;
+    text-align: center;
+    margin-left: 12%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.GarmentDetails .SecondRow .AssignEmployee #fullname{
+    width: 100%;
+    height: 75px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    float: left;
+    text-align: center;
+}
+
+.GarmentDetails .SecondRow .AssignEmployee #fullname textarea{
+    text-align: center;
+    height: 40px;
+    font-size: 25px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+/* Edit and Delete Buttons */
+
+.SecondRow .EditDelete{
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin-top: 10.5%;
+}
+
+.EditDelete input{
+    width: 35%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 30px;
+}
+
+
+.EditDelete #EditEmpButton{
+    float: right;
+}
+
+.EditDelete #deleteEmpButton{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Orders Tab */
+
+ /* Order Form Table */
+#garmOrders{
+    width: 65%;
+    height: 100%;
+    float: right;
+}
+
+#garmOrders .OrderTabs{
+    width:  100%;
+    height: 50px;
+}
+
+.OrderTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+#garmOrders #title{
+    font-size: 30px;
+    padding-left: 45px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#garmOrders .OrderTabs button{
+    width: 20%;
+    float: right;
+    height: 50px;
+    font-size: 25px;
+    margin-right: 30px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+
+
+
+
+
+/* Order Garm Form/Table Tab */
+
+.invForm .garmentOrders{
+    width: 98%;
+    float: right;
+    height: 100%;
+    margin-right: 10px;
+    overflow-y: auto;
+}
+
+.invForm .garmentOrders .NewOrderButtons{
+    margin-bottom: 10px;
+}
+
+.invForm .garmentOrders .NewOrderButtons #assignButton{
+    height: 60px;
+    width: 180px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.invForm .garmentOrders .NewOrderButtons #add_more{
+    height: 60px;
+    width: 180px;
+    font-size: 18px;
+    margin-top: 5px;
+    float: right;
+    margin-right: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.invForm .garmentOrders #ordersTable table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invForm .garmentOrders #ordersTable{
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;    
+}
+
+.invForm .garmentOrders #ordersTable thead{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+.invForm .garmentOrders #ordersTable thead tr{
+    position: sticky;
+    font-size: 18px;
+    height: 50px;
+    border: 1px solid grey;
+    width: 20%;
+}
+
+.invForm .garmentOrders #ordersTable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    /*top: 0;*/
+    text-align: center;
+}
+
+.invForm .garmentOrders #ordersTable tbody{
+    text-align: center;
+}
+
+.invForm .garmentOrders #ordersTable tbody tr{
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.garmentOrders #ordersTable tr:nth-child(even){background-color: #f2f2f2;}
+.garmentOrders #ordersTable tr:hover {background-color: #ddd;}
+
+
+
+
+
+
+/* Garm Default ID Table Input CSS
+#garmOrders #ordersTable tbody tr td select{
+    border-color: transparent transparent #fff transparent;
+    height: 70px;
+    text-align: center;
+    font-size: 17px;
+}
+
+#garmOrders #ordersTable tbody tr td select option{
+    text-align: center;
+    font-size: 17px;
+}
+
+#garmOrders #ordersTable tbody tr td .missing{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    font-size: 17px;
+    border: none;
+    font-family: Arial;
+}
+
+#garmOrders #ordersTable tbody tr td .loaned{
+    width: 60px;
+}
+
+#garmOrders #ordersTable tbody tr td select .reason{
+    width: 150px;
+}
+
+#garmOrders #ordersTable tbody tr td .amount{
+    width: 95px;
+    height: 70px;
+    font-size: 17px;
+    text-align: center;
+    border-color: transparent transparent #fff transparent;
+}
+
+#garmOrders #ordersTable tbody tr td .orderdate{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    font-size: 17px;
+    border: none;
+    font-family: Arial;
+}
+
+#garmOrders #ordersTable tbody tr td .placedby{
+    width: 115px;
+    height: 70px;
+    font-size: 17px;
+    border-color: transparent transparent #fff transparent;
+}
+
+*/
+
+
+
+
+
+
+/* All Orders Table Tab */
+
+#garmOrders #allOrders{
+    width: 95%;
+    float: right;
+    height: 500px;
+    margin-right: 10px;
+    overflow-y: auto;
+}
+
+
+#allOrders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#allOrders #allOrdersTable{
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;    
+}
+
+#allOrders thead{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+#allOrders #allOrdersTable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+    width: 20%;
+}
+
+#allOrders #allOrdersTable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    /*top: 0;*/
+    text-align: center;
+}
+
+#allOrders #allOrdersTable tbody{
+    text-align: center;
+}
+
+#allOrders #allOrdersTable tbody tr{
+    height: 50px;
+    border: 1px solid grey;
+}
+
+
+ #allOrdersTable tr:nth-child(even){background-color: #f2f2f2;}
+ #allOrdersTable tr:hover {background-color: #ddd;}
+

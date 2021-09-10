@@ -1,0 +1,210 @@
+.MainContainer .SearchBar{
+    height: 13%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+/* Inventory Search Info */
+.MainContainer .GarmOrdersResults{
+    height: 77%;
+}
+
+.GarmOrdersResults .Title{
+    width: 65%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.GarmOrdersResults .Title h2{
+    margin-left: 33px;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.blank{
+    float: right;
+    width: 35.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+
+/* Inventory Search Query and Results Form */
+.GarmOrdersResults .GarmSearchBox{
+    float: left;
+    width: 20%;
+    margin-top: 75px;
+    border: 2px royalblue solid;
+    padding-left: 10px;
+    margin-left: 13px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.GarmOrdersResults .GarmSearchBox h2{
+    margin-bottom: 0px;
+    text-align: center;
+    width: 90%;
+}
+
+.GarmOrdersResults .GarmSearchBox .OrderID_Search #id_garmentorderid{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmOrdersResults .GarmSearchBox .EmpID_Search #id_employeeid{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmOrdersResults .GarmSearchBox .Job_Search #id_job{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmOrdersResults .GarmSearchBox .Status_Search #id_orderstatus{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmSearchButtons .SearchOrder{
+    float: left;
+    margin-top: 8%;
+    width: 45%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+/* Inv Search and Reset Buttons */
+.GarmOrdersResults .GarmSearchButtons{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.GarmSearchButtons #resetemp{
+    float: right;
+    border: 1px solid black;
+    margin-top: 8%;
+    padding-top: 15px;
+    text-align: center;
+    width: 45%;
+    background-color: royalblue;
+    color: white;
+    margin-right: 10px;
+    height: 50px;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+/* Order Table Results */
+.GarmOrdersResults .GarmOrderInfo{
+    height: 86%;
+    width: 78%;
+    float: right;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable{
+    margin-right: 10px;
+    overflow-y: auto;
+    height: 500px;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 490px;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable tbody{
+    text-align: center;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable tbody tr td{
+    height: 20px;
+    width: 30px;
+}
+
+.GarmOrdersResults .GarmOrderInfo .GarmOrdersTable tbody tr td a{
+    text-decoration: none;
+    font-weight: bold;
+    color: royalblue;
+}
+
+ #garmorderstable tr:nth-child(even){background-color: #f2f2f2;}
+ #garmorderstable tr:hover {background-color: #ddd;}
+
+

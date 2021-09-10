@@ -1,0 +1,124 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="stylesheet" href="../static/app/content/site.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../static/app/content/jquery-ui.css">
+
+    <title>WCI Garment Management</title>
+</head>
+
+<body>
+    <header>        
+
+
+        <div class="HomeLogo">
+            <img onclick="window.location.href='{%  url 'home' %}'" src="..\static\app\Images\WHITE_logo.gif" class="HomeButton" value="go">
+        </div>
+
+        <div class="Directions">
+            <p id="prev">
+                <input type=button value="&laquo; Previous" onClick="javascript:history.go(-1);">
+            </p>
+            <p id="next">
+                <input type=button value="Next &raquo;" onClick="javascript:history.go(+1);">
+            <p>
+        </div>
+           
+        <div class="CustomerSupport">
+
+            <button class="SupportButton" id="supportButton" onclick="OpenSupport()">Need Help?</button>
+                
+            <div class="SupportContainer" id="supportForm">
+
+                <span class="closeSupport" onclick="CloseSupport()">&times;</span> 
+                        <br>
+                    <h2>Customer Support</h2>
+                    <form action="" method="POST" class="CustomerSupportForm">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" value="Submit">Send</button>
+                    </form>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="MainContainer">
+        {% block maincontent %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="MenuBar"> 
+            <div class="Inventory" id="InventoryButton" onclick="window.location.href='{%  url 'InventoryLanding' %}'" >
+                <input type="image" src="..\static\app\Images\garment icon.png" class="Button" value="go" >
+                <p id="InvTitle">Inventory</p>
+            </div>
+            
+            <div class="Employees" id="EmployeesButton" onclick="window.location.href='{%  url 'EmployeeLanding' %}'" >
+                <input type="image" src="..\static\app\Images\employee icon.png" class="Button" value="go" >
+                <p id="EmpTitle">Employees</p>
+            </div>
+
+            <div class="Activity" id="ActivityButton" >
+                <input type="image" src="..\static\app\Images\activity icon.png" class="Button" value="go" onclick="window.location.href='{%  url 'GarmentActivityLanding' %}'" >
+                <p id="ActTitle">Activity</p>
+            </div>        
+
+            <div onclick="window.location.href='{%  url 'GarmentOrdersLanding' %}'" class="Orders" id="OrdersButton">
+                <input type="image" src="..\static\app\Images\orders icon.png" class="Button" value="go">
+                <p id="OrdTitle">Orders</p>
+            </div>
+                
+            <div class="Cleaning" id="CleaningButton">
+                <input type="image" src="..\static\app\Images\cleaning icon.png" class="Button" value="go" onclick="window.location.href=''" >
+                <p id="ClTitle">Cleaning</p>
+            </div>
+                            
+            <div class="Repairs" id="RepairsButton">
+                <input type="image" src="..\static\app\Images\repairs icon.png" class="Button" value="go" onclick="window.location.href=''" >
+                <p id="RepTitle">Repairs</p>
+            </div>
+
+            <div class="Reports" id="ReportsButton">
+                <input type="image" src="..\static\app\Images\reports icon.png" class="Button" value="go">
+                <p id="ReportTitle">Reports</p>
+            </div>
+
+            <div class="Settings" id="SettingsButton" onclick="window.location.href=''" >
+                <input type="image" src="..\static\app\Images\settings icon.png" class="Button" value="go" >
+                <p id="SetTitle">Settings</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script language="Javascript" type="text/javascript" src="../static/app/scripts/index.js"></script>
+        
+    <script type="text/javascript">
+    function OpenSupport(){
+        document.getElementById("supportForm").style.display = "block";
+    }
+
+
+    function CloseSupport(){
+        document.getElementById("supportForm").style.display = "none";
+    }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img, embed,
+object, video {
+    max-width: 100%;
+}
+
+.Title{
+    padding-top: 13%;
+    width: 100%;
+}
+
+.Title .TitlePicture{
+    float: left;
+    width: 46%;
+}
+
+.Title img {
+    height: 175px;
+    float: right;
+    margin-top: 15%;
+}
+
+.Title .TitleText{
+    width: 52%;
+    float: right;
+    margin-top: 7%;
+}
+
+.Title #GMS {
+    font-size: 45px;
+    color: navy;
+    margin-top: 0px;
+    padding-top: 25px;
+    float: left;
+    font-family: Helvetica;
+}
+
+.Title #White {
+    margin-top: 0px;
+    font-size: 45px;
+    color: navy;
+    font-family: Helvetica;
+    float: left;
+}

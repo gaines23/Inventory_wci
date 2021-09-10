@@ -1,0 +1,550 @@
+
+
+/* Tabs */
+.EmployeeResults .EmpTabs{
+    width: 25%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.tablink:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button{
+    float: left;
+    background-color: inherit;
+    outline: none;
+}
+
+.blank{
+    float: right;
+    width: 75.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+.EmployeeResults .EmpTabs #Info{
+    width: 100%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-left: 1px grey solid;
+    font-size: 25px;
+}
+
+.ActionButtons{
+    display: none;
+}
+
+.MainContainer .EmployeeResults{
+    margin-top: 5%;
+}
+
+
+
+/* Emp Details */
+.EmployeeResults .EmpForm{
+    width: 100%;
+    float: right;
+    height: 87%;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+#employeeInfo{
+    width: 100%;
+    float: left;
+    height: 98%;
+}
+
+#employeeInfo .Employee{
+    width: 50%;
+    margin-left: 30px;
+    float: left;
+    border-right: 1px solid lightgrey;
+}
+
+#employeeInfo .Employee .FirstRow{
+    width: 90%;
+}
+
+.Employee .FirstRow #employeeid{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.Employee .FirstRow #employeeid input{
+    text-align: center;
+    font-weight: bold;
+    height: 65px;
+    width: 100%;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+.Employee .SecondRow{
+    width: 90%;
+    height: 100px;
+}
+
+.Employee .SecondRow #firstName{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.Employee .SecondRow #lastName{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.Employee .SecondRow #firstName input{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Employee .SecondRow #lastName input{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+.Employee .ThirdRow{
+    width: 90%;
+    height: 120px;
+}
+
+.Employee .ThirdRow #job{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.Employee .ThirdRow #job #id_jobdef_select{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+.Employee .ThirdRow #dept{
+    width: 45%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.Employee .ThirdRow #dept #id_divdept_select{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    font-family: Arial;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+
+
+
+
+.Employee .FourthRow{
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.Employee .FourthRow #hire{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Employee .FourthRow #hire input{
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+/* Emp Garm Info */
+
+#employeeInfo .Garment{
+    width: 47%;
+    float: right;
+    height: 90%;
+}
+
+.Garment .FirstRow{
+    width: 95%;
+    height: 85px;
+    float: right;
+    margin-right: 25px;
+}
+
+.Garment .FirstRow #slot{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Garment .FirstRow #slot input{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FirstRow #conveyor{
+    width: 45%;
+    float: right;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.Garment .FirstRow #conveyor input{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+.Garment .SecondRow{
+    width: 95%;
+    height: 85px;
+    margin-top: 55px;
+    float: right;
+    margin-right: 25px;
+}
+
+.Garment .SecondRow #gender{
+    width: 25%;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .SecondRow #gender select{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .SecondRow #gender option{
+    font-size: 20px;
+}
+
+.Garment .SecondRow #email{
+    width: 65%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.Garment .SecondRow #email input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+
+.Garment .ThirdRow{
+    width: 55%;
+    height: 85px;
+    margin-top: 70px;
+    float: left;
+    margin-left: 20px;
+}
+
+.Garment .ThirdRow #shirtSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .ThirdRow #shirtSize select{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .ThirdRow #shirtSize option{
+    font-size: 20px;
+}
+
+.Garment .ThirdRow #pantSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 3px;
+}
+
+.Garment .ThirdRow #pantSize input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+.Garment .FourthRow{
+    width: 55%;
+    height: 85px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 20px;
+}
+
+.Garment .FourthRow #shoeSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.Garment .FourthRow #shoeSize input{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FourthRow #jacketSize{
+    width: 45%;
+    float: left;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px;
+    margin-left: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.Garment .FourthRow #jacketSize select{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.Garment .FourthRow #jacketSize option{
+    font-size: 20px;
+}
+
+
+
+
+
+.Garment .FifthRow{
+    width: 38%;
+    float: right;
+    height: 200px;
+    margin-right: 25px;
+    margin-top: 70px;
+}
+
+.Garment .FifthRow #altInst{
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0px; 
+}
+
+.Garment .FifthRow #altInst textarea{
+    width: 100%;
+    height: 150px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+
+
+
+
+
+.Submit{
+    float: left;
+    width: 61%;
+    text-align: center;
+}
+
+.Submit #saveEmp{
+    float: right;
+    width: 30%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}

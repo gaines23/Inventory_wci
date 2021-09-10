@@ -1,0 +1,171 @@
+
+/* Add Garm Form Code Starts Here */
+
+.InventoryResults .InvForm .Hierarchy{
+    width: 35%;
+    height: 75%;
+    float: left;
+}
+
+.InventoryResults .InvForm .Hierarchy #hierarchyTitle{
+    font-size: 35px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .Hierarchy #division{
+    width: 100%;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.InventoryResults .InvForm .Hierarchy #division #selectDivision{
+    width: 50%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .Hierarchy #department{
+    width: 100%;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.InventoryResults .InvForm .Hierarchy #department #selectDept{
+    width: 50%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .Hierarchy #job{
+    width: 100%;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.InventoryResults .InvForm .Hierarchy #job #selectJob{
+    width: 50%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .Hierarchy #selectDivision, #selectDept, #selectJob{
+    font-size: 15px;
+    width: 210px;
+}
+
+.InventoryResults .InvForm .GarmentInfo{
+    width: 65%;
+    height: 75%;
+    float: right;
+}
+
+.InventoryResults .InvForm .GarmentInfo #garmentTitle{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #garmRFID, #preNon, #gender{
+    float: right;
+    font-size: 30px;
+    height: 50px;
+    padding-bottom: 15px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #garmRFID input{
+    margin-right: 20px;
+    width: 200px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .GarmentInfo #preNon{
+    margin-right: 20px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #preNon input{
+    margin-right: 20px;
+    width: 200px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .GarmentInfo #preNon #pre{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #preNon #non{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #gender{
+    height: 100px;
+    width: 710px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #gender select{
+    margin-right: 20px;
+    width: 100px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-bottom: 20px;
+}
+
+.InventoryResults .InvForm .GarmentInfo #gender input{
+    margin-right: 20px;
+    width: 120px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.InventoryResults .InvForm .GarmentInfo #garmDesc textarea{
+    float: right;
+    margin-right: 20%;
+    width: 365px;
+    font-size: 25px;
+    text-align: center;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.InventoryResults .InvForm .EmployeeInfo{
+    float: left;
+    width: 100%;
+    text-align: center;
+}

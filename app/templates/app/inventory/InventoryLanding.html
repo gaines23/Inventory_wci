@@ -1,0 +1,86 @@
+{% extends "app/inventory/InventoryLayout.html" %}
+
+{% block invcontent %}
+
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '../static/app/content/InventoryLanding.css' %}">
+</head>
+
+
+        <div class="Title">
+            <h2>Search Inventory</h2>
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="InvSearchBox">
+
+            <div class="ID_Search">
+                <p>Garment Number</p>
+                <input type="number" class="ID" id="IdInput" onkeyup="IDSearch()" onfocus="this.value=''">
+            </div>
+
+            <div class="FirstSec">
+                <div class="JobID">
+                    <p>Job</p>
+                    <input type="number" class="Job" id="JobInput" onkeyup="JobSearch()" onfocus="this.value=''">
+                </div>
+
+                <div class="EmpID">
+                    <p>Employee ID</p>
+                    <input type="number" class="Emp" id="EmpInput" onkeyup="EmpSearch()" onfocus="this.value=''">
+                </div>
+            </div>
+
+            <div class="SecondSec">
+                <div class="RFID">
+                    <p>RFID/Barcode</p>
+                    <input type="number" class="Rfid" id="RFIDInput" onkeyup="RFIDSearch()" onfocus="this.value=''">
+                </div>
+
+                <div class="AltID">
+                    <p>Alt ID</p>
+                    <input type="number" class="Alt" id="AltInput" onkeyup="AltSearch()" onfocus="this.value=''">
+                </div>
+            </div>
+
+            <div class="InvSearchButtons">
+                <a href="{% url 'InventoryLanding' %}" class="InventorySearch" id="inventoryButton">
+                    <p id="resetinv">Reset</p>
+                </a>
+            </div> 
+        </div>
+
+        <div class="InvTable">
+            <div class="InvSearch">
+                <table class="table table-bordered" id="invtable">
+                    <thead>
+                        <tr>
+                            <th>Garment<br> Number &nbsp;&nbsp;&#8645;</th>
+                            <th>RFID/<br> Barcode &nbsp;&nbsp;&#8645;</th>
+                            <th>Job &nbsp;&nbsp;&#8645;</th>
+                            <th>Type &nbsp;&nbsp;&#8645;</th>
+                            <th>Emp ID &nbsp;&nbsp;&#8645;</th>
+                            <th>Alt ID &nbsp;&nbsp;&#8645;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for inv in invsearch %}
+                            <tr>
+                                <td><a href="/GarmentDetails/{{inv.garmentnumber}}">{{ inv.garmentnumber }}</a></td>
+                                <td>{{ inv.rfid }}</td>
+                                <td>{{ inv.job }}</td>
+                                <td>{{ inv.description }}</td>
+                                <td><a href="/EmployeeDetails/{{inv.employeeid}}">{{ inv.employeeid }}</a></td>
+                                <td>{{ inv.altid }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    <script type="text/javascript" language="javascript" src="../static/app/scripts/InventoryLanding.js"></script>        
+
+    {% endblock %}

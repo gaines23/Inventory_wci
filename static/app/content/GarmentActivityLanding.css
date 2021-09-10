@@ -1,0 +1,257 @@
+.MainContainer{
+    background-color: #f2f2f2;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: sans-serif;
+}
+
+.MainContainer .SearchBar{
+    height: 23%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+.MainContainer .SearchBar .InstructionTitle{
+    border-top: 4px royalblue solid;
+    border-right: 4px royalblue solid;
+    border-left: 4px royalblue solid;
+    width: 17.5%;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    height: 45px;
+}
+
+.MainContainer .SearchBar .InstructionTitle p{
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 8%;
+    text-align: center;
+}
+
+.SearchBar .SearchBox{
+    height: 65%;
+    width: 95%;
+    float: left;
+    border-left: 4px royalblue solid;
+    border-bottom: 4px royalblue solid;    
+    border-right: 4px royalblue solid;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.SearchBar .SearchBox .Garment h2, .RFID h2, .Conveyor h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.SearchBar .SearchBox .Garment{
+    width: 19%;
+    text-align: center;
+    float: left;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+    margin-left: 18%;
+}
+
+.SearchBar .SearchBox .RFID{
+    float: left;
+    text-align: center;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+    width: 21%;
+}
+
+.SearchBar .SearchBox .Conveyor{
+    float: left;
+    text-align: center;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+    width: 21%;
+}
+
+.SearchBar .SearchBox #id_garmentnumber{
+    height: 50px;
+    width: 80%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchBar .SearchBox #id_rfid_barcode{
+    height: 50px;
+    width: 80%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchBar .SearchBox #id_conveyor{
+    height: 50px;
+    width: 80%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchBar .SearchAndReset{
+    float: left;
+    width: 21%;
+    height: 60px;
+    font-size: 20px;
+    border-top-right-radius: 30px 25px;
+    border-top: 4px royalblue solid;
+}
+
+.SearchAndReset .Search{
+    float: left;
+    margin-top: 8%;
+    width: 45%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchAndReset .Reset{
+    float: right;
+    border: 1px solid black;
+    margin-top: 8%;
+    text-align: center;
+    width: 45%;
+    background-color: royalblue;
+    color: white;
+    margin-right: 10px;
+    height: 50px;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+
+.MainContainer .InventoryResults{
+    height: 67%;
+    width: 85%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 7%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.InventoryResults .InvTabs{
+    width: 65%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.InventoryResults h2{
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.blank{
+    float: right;
+    width: 35.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+.InventoryResults .InvForm{
+    height: 89%;
+    font-size: 20px;
+    text-align: center;
+    border-right: 2px solid grey;
+    border-top-right-radius: 22px 25px;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.InventoryResults .InvForm .GarmActivityTable{
+    width: 100%;
+    margin-right: 10px;
+    overflow-y: auto;
+    height: 410px;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.InventoryResults .InvForm .GarmActivityTable table{
+    width: 98%;
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+
+.InventoryResults .InvForm .GarmActivityTable thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+.InventoryResults .InvForm .GarmActivityTable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.InventoryResults .InvForm .GarmActivityTable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.InvForm table tr td{
+    padding-bottom: 10px;
+}
+
+.InventoryResults .InvForm .GarmActivityTable tbody{
+    text-align: center;
+}
+
+.InventoryResults .InvForm .GarmActivityTable tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.InventoryResults .InvForm .GarmActivityTable tbody tr td a{
+    text-decoration: none;
+    font-weight: bold;
+    color: royalblue;
+}
+
+#invtable tr:nth-child(even){background-color: #f2f2f2;}
+
+#invtable tr:hover {background-color: #ddd;}

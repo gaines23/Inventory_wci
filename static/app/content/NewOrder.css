@@ -1,0 +1,358 @@
+.MainContainer .SearchBar{
+    height: 13%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+/* Inventory Search Info */
+.MainContainer .GarmOrdersResults{
+    height: 77%;
+}
+
+.GarmOrdersResults .Title{
+    width: 65%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.GarmOrdersResults .Title h2{
+    margin-left: 33px;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.blank{
+    float: right;
+    width: 35.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+
+/* Inventory Search Query and Results Form */
+.GarmOrdersResults .GarmSearchBox{
+    float: left;
+    width: 20%;
+    margin-top: 75px;
+    border: 2px royalblue solid;
+    padding-left: 10px;
+    margin-left: 13px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.GarmOrdersResults .GarmSearchBox h2{
+    margin-bottom: 0px;
+    text-align: center;
+    width: 90%;
+}
+
+.GarmOrdersResults .GarmSearchBox .Job_Search #id_job{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmOrdersResults .GarmSearchBox .OrderID_Search #id_garmenttype{
+    width: 90%;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.GarmSearchButtons .SearchOrder{
+    float: left;
+    margin-top: 8%;
+    width: 45%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.GarmSearchButtons #resetemp{
+    float: right;
+    border: 1px solid black;
+    margin-top: 8%;
+    padding-top: 15px;
+    text-align: center;
+    width: 45%;
+    background-color: royalblue;
+    color: white;
+    margin-right: 10px;
+    height: 50px;
+    font-size: 20px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+
+/* Order Form */
+
+.GarmOrdersResults .Order{
+    width: 100%;
+    float: right;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.Order #title{
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.GarmOrdersResults .GarmentOrdersForm{
+    width: 95%;
+    margin-right: 20px;
+    height: 70%;
+    margin-left: 20px;
+
+}
+
+.GarmentOrdersForm .FirstRow{
+    width: 40%;
+}
+
+.GarmentOrdersForm .FirstRow #garmentorderid{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.GarmentOrdersForm .FirstRow #garmentorderid input{
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-size: 25px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmentOrdersForm .SecondRow{
+    width: 40%;
+    height: 120px;
+}
+
+.GarmentOrdersForm .SecondRow .SelectJob{
+    width: 35%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.GarmentOrdersForm .SecondRow .SelectJob select{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.GarmentOrdersForm .SecondRow .SelectJob option{
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .SecondRow .SelectGarment{
+    width: 55%;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0px;
+    position: relative;
+    display: inline-block;
+}
+
+.GarmentOrdersForm .SecondRow .SelectGarment select{
+    text-align: center;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .SecondRow .SelectGarment option{
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .ThirdRow{
+    width: 40%;
+    height: 120px;
+}
+
+.GarmentOrdersForm .ThirdRow #reason{
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 0px;
+    position: relative;
+    display: inline-block;
+}
+
+.GarmentOrdersForm .ThirdRow #reason select{
+    text-align: center;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .ThirdRow #reason option{
+    font-size: 20px;
+
+}
+
+.GarmentOrdersForm .ThirdRow #amount{
+    width: 20%;
+    float: right;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.GarmentOrdersForm .ThirdRow #amount input{
+    font-size: 20px;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentOrdersForm .ThirdRow #status{
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 18px;
+    margin-top: 0px;
+    position: relative;
+    display: inline-block;
+}
+
+.GarmentOrdersForm .ThirdRow #status select{
+    text-align: center;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .ThirdRow #status option{
+    font-size: 20px;
+}
+
+.GarmentOrdersForm .FourthRow{
+    width: 40%;
+    height: 93px;
+}
+
+.FourthRow #orderby{
+    width: 40%;
+    float: left;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.FourthRow #orderby input{
+    font-size: 20px;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.FourthRow #orderdate{
+    width: 40%;
+    float: right;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+.FourthRow #orderdate input{
+    font-size: 20px;
+    width: 100%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px; 
+}
+
+.GarmentOrdersForm #submit{
+    width: 40%;
+    float: right;
+}
+
+#submit input{
+    float: right;
+    width: 30%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}

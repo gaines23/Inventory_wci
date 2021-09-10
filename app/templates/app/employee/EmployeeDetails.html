@@ -1,0 +1,359 @@
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/EmployeeDetails.css">
+    <script type="text/javascript" src= "../static/app/scripts/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src= "../static/app/scripts/jquery-ui.js"></script> 
+</head>
+
+        <div class="EmpTabs">
+            <button id="Info" class="TabSelect tablink active" onclick="openTab(event, 'employeeInfo')">Employee Details</button>
+
+            <button id="GarmTables" class="TabSelect tablink" onclick="openTab(event, 'employeeGarmTables')">Assigned Garments</button>
+
+            <button id="Orders" class="TabSelect tablink" onclick="openTab(event, 'empOrders')">Orders</button>
+        </div>
+
+        <div class="blank"></div>      
+
+    <div class="EmpForm">
+                    <!-- Employee Info Tab -->
+
+            <form class="empInfo" id="employeeInfo" method='POST'>
+                {% csrf_token %}
+                <div class="Employee">
+                    <div class="FirstRow">
+                        <p id="employeeid">
+                            <label for="id_employeeid">Employee ID</label>
+                                <br>
+                            {{empinfoform.employeeid}}
+                        </p>
+                    </div>
+
+                    <div class="SecondRow">
+                        <p id="firstName">
+                            <label for="id_empfirstname">First Name</label>
+                                <br>
+                            {{empinfoform.empfirstname}}
+                        </p>
+                        <p id="lastName">
+                            <label for="id_emplastname">Last Name</label>
+                                <br>
+                            {{empinfoform.emplastname}}
+                        </p>
+                    </div>
+                
+                    <div class="ThirdRow">
+                        <p id="dept">
+                            <label for="id_combineddef">Div/Dept: </label>
+                                <br>
+                            {{empinfoform.divdeptid}}
+                        </p>                        
+                        <p id="job">
+                            <label for="id_job">Job: </label>
+                                <br>
+                            {{empinfoform.jobid}}                        
+                        </p>
+                    </div>
+
+                    <div class="FourthRow">
+                        <p id="hire">
+                            <label for="id_hiredate">Hire Date</label>
+                                <br>
+                            {{empinfoform.hiredate}}
+                        </p>
+                    </div>
+                
+                </div>
+
+                <div class="Garment">
+                    <div class="FirstRow">
+                        <p id="slot">
+                            <label for="slotassignment">Assigned Slot#</label>
+                                <br>
+                            {{empinfoform.slotassignment}}
+                        </p>
+                        <p id="conveyor">
+                            <label for="id_conveyor">Conveyor #</label>
+                                <br>
+                            {{empinfoform.conveyor}}
+                        </p> 
+                    </div>
+
+                    <div class="SecondRow">
+                        <p id="gender">
+                            <label for="id_gender">Gender</label>
+                                <br>
+                            {{empinfoform.gender}}
+                        </p>  
+                        <p id="email">
+                            <label for="id_gender">Email</label>
+                                <br>
+                            {{empinfoform.empemail}}
+                        </p>  
+                    </div>
+
+                    <div class="ThirdRow">
+                        <p id="shirtSize">
+                            <label for="id_shirtsize">Shirt Size:</label>
+                                <br>
+                            {{empinfoform.shirtsize}}
+                        </p>                         
+                        <p id="pantSize">
+                            <label for="id_pantsize">Pant Size</label>
+                                <br>
+                            {{empinfoform.pantsize}}
+                        </p>   
+                    </div>
+
+                    <div class="FifthRow">
+                        <p id="altInst">
+                            <label for="id_alterationinstructions">Alterations</label>
+                                <br>
+                            {{empinfoform.alterationinstructions}}
+                        </p>
+                    </div>
+
+                    <div class="FourthRow">
+                        <p id="shoeSize">
+                            <label for="id_shoesize">Shoe Size</label>
+                                <br>
+                            {{empinfoform.shoesize}}
+                        </p>                         
+                        <p id="jacketSize">
+                            <label for="id_jacketsize">Jacket Size</label>
+                                <br>
+                            {{empinfoform.jacketsize}}
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div class="EditDelete">
+                    <input type="submit" name="delete" id="deleteEmpButton" value="Delete">
+
+                    <input type="submit" name="edit" id="EditEmpButton" value="Update">      
+                </div>
+            </form>
+
+            
+
+
+
+
+
+
+                <!-- Employee Garment Info -->
+
+            <div class="empInfo" id="employeeGarmTables" style="display:none">
+                <div class="AssignedGarmentsTable">
+                    <p>Assigned Garments for Employee</p>
+                    <div class="EmpGarms">
+                        <table class="table table-bordered" id="empgarmtable">
+                            <thead>
+                                <tr>
+                                    <th>Garment<br>Number</th>
+                                    <th>Garment<br>Type</th>
+                                    <th>RFID</th>
+                                    <th>Slot</th>
+                                    <th>Last<br>Picked Up</th>
+                                    <th>Last<br>Dropped Off</th>
+                                    <th>Missing</th>
+                                    <th>Amt<br>Assigned</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for emp in empgarms %}
+                                    <tr>
+                                        <td><a href="/GarmentDetails/{{emp.garmentid}}">{{ emp.garmentid }}</a></td>
+                                        <td>{{ emp.garmenttype }}</td>
+                                        <td>{{ emp.rfid }}</td>
+                                        <td>{{ emp.slotnumber }}</td>
+                                        <td>{{ emp.lastpickedup }}</td>
+                                        <td>{{ emp.lastdroppedoff }}</td>
+                                        <td>{{ emp.missing }}</td>
+                                        <td>{{ emp.empgarmpar }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="JobGarmOutfits">
+                    <p>Garments Needed for Job(s)</p>
+                    <div class="JobGarms">
+                        <table class="table table-bordered" id="jobgarmtable">
+                            <thead>
+                                <tr>
+                                    <th>Job</th>
+                                    <th>Description</th>
+                                    <th>Multi<br>Use</th>
+                                    <th>Total /<br>Job</th>
+                                    <th>Reserve<br>Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for garm in jobgarms %}
+                                    <tr>
+                                        <td class="job">{{ garm.job }}</td>
+                                        <td class="desc">{{ garm.garmenttype }}, {{ garm.garmsize }}, {{ garm.garmdescription }}, {{ garm.garmlength }}</td>
+                                        <td class="multi">{{ garm.multiuse }}</td>
+                                        <td class="tpj">{{ garm.totalperjob }}</td>
+                                        <td class="rs">{{ garm.reservestock }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Orders Tab -->
+
+        <div class="empInfo" id="empOrders" style="display:none">
+                 
+            <div class="EmpGarmStats">
+                        <p>Inventory Information</p>
+
+              <div class="GarmStats">
+
+                    <table class="table table-bordered" id="garmstatstable">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Assigned</th>
+                                <th>Total Per Job</th>
+                                <th>Reserve<br>Stock</th>
+                                <th>Max Order</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for egs in empgarmstats %}
+                                <tr>
+                                    <td>{{ egs.garmenttype }}</td>
+                                    <td>{{ egs.empgarmpar }}</td>
+                                    <td>{{ egs.totaljobpar }}</td>
+                                    <td>{{ egs.totalreservestock }}</td>
+                                    <td>{{ egs.maxorder }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+
+            <div class="AllEmpOrders">
+                <p>All Orders for Employee:
+                <div class="AllOrders">
+                    <table class="table table-bordered" id="empordertable">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Reason</th>
+                                <th>Placed By</th>
+                                <th>Placed On</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for eo in allemporders %}
+                                <tr>
+                                    <td>{{ eo.garmenttype }}</td>
+                                    <td>{{ eo.amount }}</td>
+                                    <td>{{ eo.reason }}</td>
+                                    <td>{{ eo.orderplacedby }}</td>
+                                    <td>{{ eo.orderplaceddate }}</td>
+                                    <td>{{ eo.orderstatus }}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>                
+            </div>
+
+        </div>
+
+    </div>
+
+    <script language="Javascript" type="text/javascript" src="../static/app/scripts/EmpDetails.js"></script>
+
+    <script language="javascript">
+
+
+        $( function() {
+            var availableTags = [
+                {% for dept in divdepts %}
+                    "{{dept.divdept_select}}",
+                {% endfor %}
+            ];
+            $( "#id_combineddef" ).autocomplete({
+              source: availableTags
+            });
+          } );
+        $( function() {
+
+            var availableTags = [
+                {% for job in jobs %}
+                    "{{job.jobdef_select}}",
+                {% endfor %}
+            ];
+            $( "#id_job" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+    </script>
+
+    {% endblock %}
+
+
+
+<!--
+            $('#id_divdept_select').change(function() {populateJob(this)});
+        
+        divs = {{ empinfoform.divs | safe }};
+        jobs = {{ empinfoform.jobs | safe }};
+
+        populateDiv();
+        $("#id_jobdef_select").empty();
+        $("#id_jobdef_select").append('<option value="" selected>{{ empinfo.jobid }}</option>');
+        function populateDiv() {
+            $('#id_divdept_select').empty();
+            $("#id_divdept_select").append('<option value=""selected>{{ empinfo.divdeptid }}</option>');
+            $.each(divs, function(v) {
+                $('#id_divdept_select')
+                    .append($("<option></option>")
+                    .attr("value", divs[v])
+                    .text(divs[v]));
+            });
+        }
+
+        function populateJob(event) {
+            div = $("#id_divdept_select option:selected").text();
+            $("#id_jobdef_select").empty();
+            $("#id_jobdef_select").append('<option value="" disabled selected>Select Job</option>');
+            for (let [b, bjobs] of Object.entries(jobs)) {
+                if (b == div) {                    
+                    for (job in bjobs) {
+                        $('#id_jobdef_select')
+                            .append($("<option></option>")
+                                .attr("value", bjobs[job])
+                                .text(bjobs[job]));
+                    }
+                }
+            }
+        }
+
+-->

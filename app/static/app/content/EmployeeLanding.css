@@ -1,0 +1,265 @@
+.EmployeeResults .Title{
+    width: 65%;
+    height: 65px;
+    border-top: 2px grey solid;
+    border-right: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.EmployeeResults .Title h2{
+    margin-left: 33px;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.blank{
+    float: right;
+    width: 35.2%;
+    text-align: center;
+    border-top: 2.5px solid grey; 
+    height: 30px;
+    border-top-right-radius: 22px 25px;
+    border-right: 2px grey solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inventory Search Query and Results Form */
+.EmpSearchBox{
+    width: 37%;
+    float: left;
+    height: 85%;
+    border-right: 1px lightgrey solid;
+}
+
+.EmpSearchBox .ID_Search{
+    width: 92%;
+    margin-left: 10px;
+    height: 18%;
+}
+
+.EmpSearchBox .ID_Search #IdInput{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .FirstSec, .SecondSec{
+    width: 100%;
+    height: 25%;
+}
+
+.EmpSearchBox p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .FirstSec .First_Search{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.EmpSearchBox .First_Search #FirstNameInput{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .FirstSec .Last_Search{
+    float: right;
+    width: 45%;
+    margin-right: 20px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Last_Search #LastNameInput{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .SecondSec .Job_Search{
+    float: right;
+    width: 45%;
+    height: 80%;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Job_Search #JobInput{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .SecondSec .Dept_Search{
+    float: left;
+    width: 45%;
+    margin-left: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Dept_Search #DeptInput{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+/* Inv Search and Reset Buttons */
+.EmpSearchButtons{
+    float: right;
+    width: 35%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.EmpSearchButtons #resetemp{
+    border: 1px solid black;
+    padding-top: 11px;
+    text-align: center;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-decoration: none;    
+}
+
+.EmpSearchButtons .EmployeeSearch{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inv Table results */
+.EmployeeResults .EmpTable{
+    height: 87%;
+    width: 62%;
+    float: right;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.EmployeeResults .EmpTable .EmpSearch{
+    margin-right: 10px;
+    overflow-y: auto;
+    height: 500px;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+.EmployeeResults .EmpTable .EmpSearch table{
+    width: 100%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.EmployeeResults .EmpTable .EmpSearch thead{
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+}
+
+.EmployeeResults .EmpTable .EmpSearch thead th{
+    border-bottom: 1px solid grey;
+    position: sticky;
+}
+
+.EmployeeResults .EmpTable .EmpSearch thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.EmployeeResults .EmpTable .EmpSearch tbody{
+    text-align: center;
+}
+
+.EmployeeResults .EmpTable .EmpSearch tbody tr{
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.EmployeeResults .EmpTable .EmpSearch tbody tr td a{
+    text-decoration: none;
+    font-weight: bold;
+    color: royalblue;
+}
+
+ #emptable tr:nth-child(even){background-color: #f2f2f2;}
+ #emptable tr:hover {background-color: #ddd;}
+
+

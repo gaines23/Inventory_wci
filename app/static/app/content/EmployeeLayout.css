@@ -1,0 +1,51 @@
+
+body{
+    margin-top: 18px;
+}
+
+
+/* Action Buttons */
+.ActionButtons{
+    height: 10%;
+    width: 16%;
+    margin-top: 0px;
+    float: right;
+    margin-right: 2%;
+}
+
+.ActionButtons .Add{
+    height: 100%;
+    width: 100%;
+}
+
+.ActionButtons .AddButton{
+    height: 110%;
+    width: 95%;
+    margin-top: 30px;
+    border-top-right-radius: 80px 90px;
+    border-bottom-right-radius: 80px 90px;
+    border-top-left-radius: 80px 90px;
+    border-bottom-left-radius: 80px 90px;
+    font-size: 30px;
+    border: 10px navy solid;
+    color: navy;
+}
+
+
+
+
+
+/* Inventory Search Info */
+
+.MainContainer .EmployeeResults{
+    height: 85%;
+    width: 94%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 3%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+}

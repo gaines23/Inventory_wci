@@ -1,0 +1,26 @@
+{% extends "app/layout.html" %}
+{% block maincontent %}
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/GarmentOrdersLayout.css">
+</head>
+    
+    <div class="SearchBar">
+        {% block search %}
+        {% endblock %}
+    </div>
+
+    <div class="GarmOrdersResults">
+
+        {% block ordercontent %}
+        {% endblock %}
+
+    </div>
+    
+    <div class="ActionButtons">
+
+        {% block actionbuttons %}
+        {% endblock %}
+
+    </div>
+
+{% endblock %}

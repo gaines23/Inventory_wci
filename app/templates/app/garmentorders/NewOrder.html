@@ -1,0 +1,119 @@
+{% extends "app/garmentorders/GarmentOrdersLayout.html" %}
+
+{% block ordercontent %}
+
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/app/content/NewOrder.css">
+</head>
+
+    <div class="Title">
+            <h2>Add New Order</h2> 
+    </div>
+
+        <div class="blank"></div>
+
+		<div class="Order">
+
+			<p id="title">Order Form:</p>
+		
+			<form class="GarmentOrdersForm" id="garmOrders" method="POST" action="{% url 'GarmentOrdersLanding' %}">
+                {% csrf_token %}
+                {{ form }}
+ 				<div class="FirstRow">
+					<p id="garmentorderid">
+						<label for="id_garmentorderid">Order ID</label>
+						{{order.garmentorderid}}
+					</p>
+				</div>
+
+               <div class="SecondRow">
+                    <p class="SelectJob">
+                        <label for="id_select_job">Job: </label>
+                             <br>
+                        {{order.select_job}}
+                    </p>
+                    <p class="SelectGarment">
+                        <label for="id_select_garmdef">Garment Type: </label>
+                            <br>
+                        {{order.select_garmdef}}
+                    </p>
+                </div>
+<!--
+                <div class="ThirdRow">
+                	<p id="reason">
+                		<label for="id_reason">Reason/Purpose</label>
+                			<br>
+                		{{order.reason}}
+                	</p>
+                	<p id="amount">
+                		<label for="id_amount">Amount</label>
+                			<br>
+                		{{order.amount}}
+                	</p>
+                </div>
+
+                <div class="FourthRow">
+                	<p id="orderby">
+                		<label for="id_orderplacedby">Order Placed By</label>
+                			<br>
+                		{{order.orderplacedby}}
+                	</p>
+                	<p id="orderdate">
+                		<label for="id_orderplaceddate">Order Placed On</label>
+                			<br>
+                		{{order.orderplaceddate}}
+                	</p>
+                </div>
+-->
+                <p id="submit">
+                    <input type="submit" id="newOrder" value="Submit Order">
+                </p>
+			</form>
+		</div>
+
+
+	{% endblock %}
+
+	{% block actionbuttons %}
+        <a href="{% url 'CreateGarmentOrder' %}" class="Add">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add</button>
+        </a>
+
+    <script language="javascript">
+        $('#id_select_job').change(function() {populateGarmDef(this)});
+        
+        jobchoices = {{ order.jobchoices | safe }};
+        garmchoices = {{ order.garmchoices | safe }};
+        populateJob();
+        $("#id_select_garmdef").empty();
+        $("#id_select_garmdef").append('<option value="" disabled selected>Select Job First</option>');
+        function populateJob() {
+            $('#id_select_job').empty();
+            $("#id_select_job").append('<option value="" disabled selected>Select Job</option>');
+            $.each(jobchoices, function(v) {
+                $('#id_select_job')
+                    .append($("<option></option>")
+                    .attr("value", jobchoices[v])
+                    .text(jobchoices[v]));
+            });
+        }
+
+        function populateGarmDef(event) {
+            jobchoice = $("#id_select_job option:selected").text();
+            $("#id_select_garmdef").empty();
+            $("#id_select_garmdef").append('<option value="" disabled selected>Select Garment Type</option>');
+            for (let [b, bchoices] of Object.entries(garmchoices)) {
+                if (b == jobchoice) {                    
+                    for (garmchoice in bchoices) {
+                        $('#id_select_garmdef')
+                            .append($("<option></option>")
+                                .attr("value", bchoices[garmchoice])
+                                .text(bchoices[garmchoice]));
+                    }
+                }
+            }
+        }
+    </script>
+
+{% endblock %}

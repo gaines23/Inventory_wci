@@ -1,0 +1,384 @@
+{% extends "app/inventory/InventoryLayout.html" %}
+
+{% block invcontent %}
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '../static/app/content/GarmentDetails.css' %}">
+   
+</head>
+
+        <div class="GarmTabs">
+            <button id="Info" class="TabSelect tablink active" onclick="openTab(event, 'garmInfo')">Garment Details</button>
+
+            <button id="Orders" class="TabSelect tablink" onclick="openTab(event, 'garmOrders')">Orders</button>
+        </div>
+
+
+        <div class="blank"></div> 
+
+        <div class="GarmForm">
+
+            <div class="GarmIdRFID">    
+                <form id="garmID" class="IdRfid" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="FirstRow">
+                        <p id="garmnumber">
+                            <label for="id_garmentnumber">Garment Number:</label>
+                                <br>
+                            {{updategarmform.garmentnumber}}
+                        </p>
+                        <p id="rfid">
+                            <label for="id_rfid_barcode">RFID/Barcode #:</label>
+                                    <br>
+                            {{updategarmform.rfid_barcode}}
+                        </p>
+                    </div>
+
+                    <div class="SecRow">
+                        <p class="SelectJob">
+                            <label for="id_jobid">Job: </label>
+                                <br>
+                            {{updategarmform.jobid}}
+                        </p>
+                        <p class="DeptDiv">
+                                <label for="id_divdeptid">Dept/Division</label>
+                            {{updategarmform.divdeptid}}
+                        </p>
+                    </div>
+                </form>
+
+                <div class="GarmInvStats">
+                    <p id="stats">Garment Stats</p>
+                    <div class="GarmsStatsTable">
+                    {% for gar in garmstats %}
+                        <div class="Stats">
+                            <table class="table table-bordered" id="garmtable">
+                                <tbody>
+                                    <tr>
+                                        <th>Total Per Job</th>
+                                        <td>{{ gar.totalperjob }}</td>
+                                    </tr>
+                                    <tr>    
+                                        <th>Total Assigned</th>
+                                        <td>{{ gar.totalassigned }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Reserve Stock</th>
+                                        <td>{{ gar.totalreservestock }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total Inv</th>
+                                        <td>{{ gar.totalinv }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Max Amt Inv</th>
+                                        <td>{{ gar.maxamountinv }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Inv % Full</th>
+                                        <td>{{ gar.percentfull }}%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+
+
+                        <!-- Garment Details Info Tab -->
+
+            <div class="invForm" id="garmInfo">
+                <form class="GarmentDetails"  method="POST">
+                {% csrf_token %}
+                {{ form }}
+                    <div class="FirstRow">
+                        <div class="GarmInfo">
+                            <p id="garmentTitle">
+                                Garment Information
+                            </p>
+
+                            <p class="SelectGarment">
+                                <label for="id_garmentdefaultid">Type: </label>
+                                    <br>
+                                {{updategarmform.garmentdefaultid}}
+                            </p>
+
+                            <div class="OtherInfo">
+                                <p id="missing">
+                                    <label for="id_missing">Missing: (Date)</label>
+                                        {{updategarmform.missing}}
+                                </p>
+                                <p id="loaned">
+                                    <label for="id_loaned">Loaned:</label>
+                                        <br>
+                                    {{updategarmform.loaned}}
+                                </p>
+                                <p id="altid">
+                                    <label for="id_altid">Alternate ID:</label>
+                                    {{updategarmform.altid}}
+                                </p>
+                            </div>
+
+                            <div class="GarmAlt">
+                                <p id="alts">
+                                    <label for="id_alterations">Alterations</label>
+                                    {{updategarmform.alterations}}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ConveyorInfo">
+                            <p id="conveyorTitle">
+                                Conveyor Information
+                            </p>
+
+                            <div class="slotconv">
+                                <p id="slot">
+                                    <label for="id_slotnumber">Slot Number:</label>
+                                        <br>
+                                    {{updategarmform.slotnumber}}
+                                </p>
+                                
+                                <p id="conv">
+                                    <label for="id_conveyornumber">Conveyor #:</label>
+                                        <br>
+                                    {{updategarmform.conveyornumber}}
+                                </p>
+                            </div>
+
+                            <p id="garmlocation">
+                                <label for="id_garmlocation">Garm Location:</label>
+                                    <br>
+                                {{updategarmform.garmlocation}}
+                            </p>
+
+                            <div class="dates">
+                                <p id="pickup">
+                                    <label for="id_pickupdate">Last Picked-up:</label>
+                                        <br>
+                                    {{updategarmform.pickupdate}}
+                                </p>
+
+                                <p id="dropoff">
+                                    <label for="id_droppedoffdate">Last Dropped-off:</label>
+                                        <br>
+                                    {{updategarmform.dropoffdate}}
+                                </p>
+                            </div>
+
+                            <p id="dateadded">
+                                <label for="dateadded">Date Added</label>
+                                    <br>
+                                {{updategarmform.dateadded}}
+                            </p>
+
+                        </div>
+                    </div>
+               
+
+                    <div class="SecondRow">
+                        <div class="AssignEmployee">
+                            <p id="enterEmp">
+                                <label for="id_employeeid">Employee ID: </label> 
+                                    <br>
+                                {{updategarmform.employeeid}}
+                            </p>
+
+                            <p id="fullname">
+                                <label for="empfullname">Name (Search): </label>
+                                    <br>
+                                <textarea>{{updategarmform.instance.employeeid.empfullname}}</textarea>
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="EditDelete">
+                            <input type="submit" name="delete" id="deleteEmpButton" value="Delete">
+
+                            <input type="submit" name="edit" id="EditEmpButton" value="Update">      
+                        </div>
+                    </div>
+
+                </form> 
+
+            </div>
+
+
+
+
+
+
+                        <!-- New Garment Order Tab -->
+            <div class="invForm" id="garmOrders" style="display:none">
+
+                <div class="OrderTabs">
+                    <p id="title">Place New Order or Search Orders</p>
+                    
+                    <button id="AllOrders" class="OrderTabSelect ordtablink" onclick="openOrdTab(event, 'allOrders')">All Orders</button>
+                    
+                    <button id="OrderGarm" class="OrderTabSelect ordtablink active" onclick="openOrdTab(event, 'orderGarm')">Garment Orders</button>
+                </div>
+
+                <div class="garmentOrders" id="orderGarm">
+
+                    <form class="OrdersForm" method='POST' action="" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+                        {{ formset.management_form }}
+
+                        <div class="NewOrderButtons">
+                            <input type="submit" name="order" id="assignButton" value="Update Information">
+                            <input type="button" value="New Order" id="add_more">
+                        </div>
+
+                        <!-- New Orders/Orders Tab For Particular Garment -->
+
+                        <table class="table table-bordered" id="ordersTable">
+                            <thead>
+                                <tr>
+                                    <th>Delete</th>
+                                    <th>Missing</th>
+                                    <th>Loaned</th>
+                                    <th>Reason &nbsp;&nbsp;&#8645;</th>
+                                    <th>Amount &nbsp;&nbsp;&#8645;</th>
+                                    <th>Placed On &nbsp;&nbsp;&#8645;</th>
+                                    <th>Placed By &nbsp;&nbsp;&#8645;</th>
+                                    <th>Status &nbsp;&nbsp;&#8645;</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for order in formset %}
+                                    <tr>
+                                        <td>{{ order.DELETE }}</td>
+                                        <td>{{ order.missing }}</td>
+                                        <td>{{ order.loaned }}</td>
+                                        <td>{{ order.reason }}</td>
+                                        <td>{{ order.amount }}</td>
+                                        <td>{{ order.orderplaceddate }}</td>
+                                        <td>{{ order.orderplacedby }}</td>
+                                        <td>{{ order.orderstatus }}</td>
+                                        <td>{{ order.garmentdefaultid }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+
+                <!-- All Orders Tab -->
+
+                <div class="garmentOrders" id="allOrders" style="display:none">
+
+                    <table class="table table-bordered" id="allOrdersTable">
+
+                        <thead>
+                            <tr>
+                                <th>Description &nbsp;&nbsp;&#8645;</th>
+                                <th>Reason &nbsp;&nbsp;&#8645;</th>
+                                <th>Amount &nbsp;&nbsp;&#8645;</th>
+                                <th>Job &nbsp;&nbsp;&#8645;</th>
+                                <th>Placed On &nbsp;&nbsp;&#8645;</th>
+                                <th>Placed By &nbsp;&nbsp;&#8645;</th>
+                                <th>Status &nbsp;&nbsp;&#8645;</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for o in ords %}
+                                <tr>
+                                    <td>{{ o.garmentdefaultid }}</td>
+                                    <td>{{ o.reason }}</td>
+                                    <td>{{ o.amount }}</td>
+                                    <td>{{ o.jobid }}</td>
+                                    <td>{{ o.orderplaceddate }}</td>
+                                    <td>{{ o.orderplacedby }}</td>
+                                    <td>{{ o.orderstatus }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="{% static '../static/app/scripts/GarmDetails.js' %}"></script>
+ 
+    <script language="Javascript" type="text/javascript">
+
+        $( function() {
+            var availableTags = [
+                {% for dept in divdept %}
+                    "{{dept.divdeptid}}",
+                {% endfor %}
+            ];
+            $( "#id_divdeptid" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+        $( function() {
+            var availableTags = [
+                {% for job in jobs %}
+                    "{{job.jobid}}",
+                {% endfor %}
+            ];
+            $( "#id_job" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+    </script>
+
+
+{% endblock %}
+
+
+
+<!--
+        $('#id_select_job').change(function() {populateGarmDef(this)});
+        
+        jobchoices = {{ order.jobchoices | safe }};
+        garmchoices = {{ order.garmchoices | safe }};
+        populateJob();
+        $("#id_select_garmdef").empty();
+        $("#id_select_garmdef").append('<option value="" disabled selected>Select Job First</option>');
+        function populateJob() {
+            $('#id_select_job').empty();
+            $("#id_select_job").append('<option value="" disabled selected>Select Job</option>');
+            $.each(jobchoices, function(v) {
+                $('#id_select_job')
+                    .append($("<option></option>")
+                    .attr("value", jobchoices[v])
+                    .text(jobchoices[v]));
+            });
+        }
+
+        function populateGarmDef(event) {
+            jobchoice = $("#id_select_job option:selected").text();
+            $("#id_select_garmdef").empty();
+            $("#id_select_garmdef").append('<option value="" disabled selected>Select Garment Type</option>');
+            for (let [b, bchoices] of Object.entries(garmchoices)) {
+                if (b == jobchoice) {                    
+                    for (garmchoice in bchoices) {
+                        $('#id_select_garmdef')
+                            .append($("<option></option>")
+                                .attr("value", bchoices[garmchoice])
+                                .text(bchoices[garmchoice]));
+                    }
+                }
+            }
+        }
+-->

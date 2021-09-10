@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+{% block maincontent %}
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '../static/app/content/SettingsLayout.css' %}">
+</head>
+
+
+    <div class="SettingsResults">
+
+        {% block invcontent %}
+        {% endblock %}
+
+    </div>
+
+{% endblock %}

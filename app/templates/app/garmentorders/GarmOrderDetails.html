@@ -1,0 +1,136 @@
+{% extends "app/garmentorders/GarmentOrdersLayout.html" %}
+
+{% block ordercontent %}
+
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/app/content/GarmOrderDetails.css">
+</head>
+
+    <div class="Title">
+            <h2>Order Details</h2> 
+    </div>
+
+        <div class="blank"></div>
+		
+		<div class="Stats">
+                <div class="OrdersTable">
+                	{% for ord in orderstats %}
+                    
+                    <p>Inventory Info for Order ID: <b>{{ ord.garmentorderid }}</b></p>
+                    <div class="Orders">
+                        <table class="table table-bordered" id="ordertable">
+                            <tbody>
+								<tr>
+									<th>Garment Type</th>
+									<td>{{ ord.garmenttype }}</td>
+								</tr>
+								<tr>
+									<th>Max Per Job</th>
+									<td>{{ ord.totalperjob }}</td>
+								</tr>
+								<tr>
+									<th>Reserve Stock</th>
+									<td>{{ ord.totalreservestock }}</td>
+								</tr>
+								<tr>
+									<th>Max Inv</th>
+									<td>{{ ord.maxamountinv }}</td>
+								</tr>
+								<tr>
+									<th>Total In Inv</th>
+									<td>{{ ord.totalinv }}</td>
+								</tr>
+								<tr>
+									<th>Total Assigned</th>
+									<td>{{ ord.totalassigned }}</td>
+								</tr>
+								<tr>
+									<th>Total Unassigned</th>
+									<td>{{ ord.totalunassigned }}</td>
+								</tr>
+								<tr>
+									<th>Inv % Full</th>
+									<td>{{ ord.percentfull }}%</td>
+								</tr>
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+		</div>
+	
+
+		<div class="Order">
+
+			<p id="title">Order Form:</p>
+		
+			<form class="GarmentOrdersForm" id="garmOrders" method="POST">
+				{% csrf_token %}
+				<div class="FirstRow">
+					<p id="garmentorderid">
+						<label for="id_garmentorderid">Order ID</label>
+						{{orderdetailform.garmentorderid}}
+					</p>
+				</div>
+
+				<div class="SecondRow">
+                    <p class="SelectJob">
+                        <label for="id_select_job">Job: </label>
+                             <br>
+                        {{orderdetailform.select_job}}
+                    </p>
+                    <p class="SelectGarment">
+                        <label for="id_select_garmdef">Garment Type: </label>
+                            <br>
+                        {{orderdetailform.select_garmdef}}
+                    </p>
+                </div>
+
+                <div class="ThirdRow">
+                	<p id="reason">
+                		<label for="id_reason">Reason/Purpose</label>
+                			<br>
+                		{{orderdetailform.reason}}
+                	</p>
+                	<p id="amount">
+                		<label for="id_amount">Amount</label>
+                			<br>
+                		{{orderdetailform.amount}}
+                	</p>
+                	<p id="status">
+                		<label for="id_orderstatus">Status</label>
+                			<br>
+                		{{orderdetailform.orderstatus}}
+                	</p>
+                </div>
+
+                <div class="FourthRow">
+                	<p id="orderby">
+                		<label for="id_orderplacedby">Order Placed By</label>
+                			<br>
+                		{{orderdetailform.orderplacedby}}
+                	</p>
+                	<p id="orderdate">
+                		<label for="id_orderplaceddate">Order Placed On</label>
+                			<br>
+                		{{orderdetailform.orderplaceddate}}
+                	</p>
+                </div>
+
+                <p id="submit">
+                    <input type="submit" id="edit" value="Edit Order">
+                </p>
+			</form>
+		</div>
+
+
+{% endblock %}
+
+	{% block actionbuttons %}
+        <a href="{% url 'CreateGarmentOrder' %}" class="Add">
+            <button class="AddButton" id="addButton" onclick="SelectAction()">Add</button>
+        </a>
+
+
+{% endblock %}

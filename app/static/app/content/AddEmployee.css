@@ -1,0 +1,32 @@
+.MainContainer{
+	height: 863px;
+}
+
+.AddEmployeeInformation{
+	height: 800px;
+	width: 80%;
+	background-color: white;
+	margin-top: 10px;
+}
+
+.AddEmployeeInformation .SelectionType{
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 200px;
+}
+
+.AddEmployeeInformation .SelectionType button{
+	width: 150px;
+	height: 100px;
+	margin-right: 25px;
+	background: transparent;
+	border: none;
+	font-size: 25px;
+}
+
+.AddEmployeeInformation .searchBar{
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	margin-left: 100px;
+}
+
